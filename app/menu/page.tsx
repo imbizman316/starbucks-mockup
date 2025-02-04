@@ -20,13 +20,28 @@ function MenuNav() {
   const MenuItem = ({ props }: { props: MenuOption }) => {
     return (
       <Link href={props.link}>
-        <Typography>{props.title}</Typography>
+        <Typography
+          sx={{
+            color: "#586a82",
+            fontSize: "13px",
+            fontWeight: 400,
+            textUnderlinePosition: 1,
+            textUnderlineOffset: 1,
+          }}
+        >
+          {props.title}
+        </Typography>
       </Link>
     );
   };
 
   return (
-    <Box>
+    <Box
+      sx={{
+        display: "flex",
+        gap: 2,
+      }}
+    >
       {menu_options.map((option) => (
         <MenuItem key={option.id} props={option} />
       ))}
@@ -37,7 +52,7 @@ function MenuNav() {
 function MenuPage() {
   return (
     <Box>
-      <StickyTitle>
+      <StickyTitle color="#f9f9f9">
         <MenuNav />
       </StickyTitle>
     </Box>
