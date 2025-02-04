@@ -6,21 +6,23 @@ import RoomIcon from "@mui/icons-material/Room";
 import Link from "next/link";
 
 const menus = [
-  { id: 1, title: "MENU" },
-  { id: 2, title: "REWARDS" },
-  { id: 3, title: "GIFT CARDS" },
+  { id: 1, title: "MENU", link: "/menu" },
+  { id: 2, title: "REWARDS", link: "/rewards" },
+  { id: 3, title: "GIFT CARDS", link: "/gift" },
 ];
 
-const MenuItem = ({ children }: { children: string }) => {
+const MenuItem = ({ link, children }: { link: string; children: string }) => {
   return (
-    <Typography
-      sx={{
-        fontWeight: "bold",
-        fontSize: 15,
-      }}
-    >
-      {children}
-    </Typography>
+    <Link href={link}>
+      <Typography
+        sx={{
+          fontWeight: "bold",
+          fontSize: 15,
+        }}
+      >
+        {children}
+      </Typography>
+    </Link>
   );
 };
 
@@ -44,15 +46,19 @@ function Navbar() {
           alignItems: "center",
         }}
       >
-        <Image
-          src={"/images/logos/Starbucks_Corporation_Logo_2011.svg.png"}
-          width={50}
-          height={50}
-          alt="logo"
-        />
+        <Link href={"/"}>
+          <Image
+            src={"/images/logos/Starbucks_Corporation_Logo_2011.svg.png"}
+            width={50}
+            height={50}
+            alt="logo"
+          />
+        </Link>
         <Box sx={{ display: "flex", gap: 2, paddingLeft: "2rem" }}>
           {menus.map((menu, index) => (
-            <MenuItem key={index}>{menu.title}</MenuItem>
+            <MenuItem link={menu.link} key={index}>
+              {menu.title}
+            </MenuItem>
           ))}
         </Box>
       </Container>
