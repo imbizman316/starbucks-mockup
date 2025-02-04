@@ -13,7 +13,6 @@ function Rewards() {
             color: "#FFFFFF",
             fontSize: 15,
             fontWeight: "bold",
-            paddingLeft: 5,
           }}
         >
           STARBUCKS REAWARDS
