@@ -25,7 +25,7 @@ function PrivacyTerms() {
       {privacyOptions.map((option) => (
         <Typography
           sx={{
-            fontSize: "14px",
+            fontSize: "15px",
             fontWeight: 400,
             color: "#767676",
             ":hover": {

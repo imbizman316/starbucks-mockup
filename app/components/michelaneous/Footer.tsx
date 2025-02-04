@@ -6,10 +6,10 @@ import Typography from "@mui/material/Typography";
 
 function Footer() {
   return (
-    <Box sx={{ paddingX: 5 }}>
+    <Box sx={{ paddingX: 7, paddingY: 5 }}>
       <SocialHandleBar />
       <PrivacyTerms />
-      <Typography sx={{ paddingTop: 3 }}>
+      <Typography sx={{ paddingTop: 3, fontSize: "14px", color: "#c9b7b3" }}>
         &copy; 2025 Starbucks Coffee Company. All right reserved.
       </Typography>
     </Box>
