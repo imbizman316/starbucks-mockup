@@ -2,11 +2,12 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import TopStar from "../components/pages/rewards/TopStar";
 import GettingStarted from "../components/pages/rewards/GettingStarted";
+import StickyTitle from "../components/navigation/StickyTitle";
 
 function Rewards() {
   return (
     <Box>
-      <Box sx={{ bgcolor: "#1c3a32", paddingY: 2, boxShadow: 4 }}>
+      <StickyTitle>
         <Typography
           sx={{
             color: "#FFFFFF",
@@ -15,9 +16,9 @@ function Rewards() {
             paddingLeft: 5,
           }}
         >
-          STARBUCKS REWARDS
+          STARBUCKS REAWARDS
         </Typography>
-      </Box>
+      </StickyTitle>
       <TopStar />
       <GettingStarted />
     </Box>
