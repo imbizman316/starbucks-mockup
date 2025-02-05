@@ -3,14 +3,14 @@ import { Box } from "@mui/material";
 // import Image from "next/image";
 import React from "react";
 
-function BoxCard({ image, description, position }: boxCard) {
+function BoxCard({ image, description, position, color }: boxCard) {
   return (
     <Box
       sx={{
         display: "grid",
         width: "100%",
         gridTemplateColumns: "1fr 1fr",
-        backgroundColor: "#016243",
+        backgroundColor: color,
         minHeight: "600px",
       }}
     >
@@ -22,17 +22,6 @@ function BoxCard({ image, description, position }: boxCard) {
           alignItems: "center",
         }}
       >
-        {/* <Image
-          src={image}
-          alt="happy man"
-          width={650}
-          height={650}
-          style={{
-            flex: 1,
-            maxWidth: 650,
-            maxHeight: 650,
-          }}
-        /> */}
         <Box
           sx={{
             width: "100%",
