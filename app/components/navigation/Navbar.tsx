@@ -80,12 +80,12 @@ function Navbar() {
         </Box>
         <Box sx={{ display: "flex", gap: 1 }}>
           <Button
+            className="buttonPadding"
             sx={{
               backgroundColor: "#FFFFFF",
               borderRadius: 12,
               fontSize: 10,
               color: "#000000b3",
-              paddingX: 2,
               fontWeight: "bold",
               borderColor: "#000000b3",
               borderBlockStyle: "solid",
@@ -95,12 +95,12 @@ function Navbar() {
             Sign in
           </Button>
           <Button
+            className="buttonPadding"
             sx={{
               backgroundColor: "#000000b3",
               borderRadius: 12,
               fontSize: 10,
               color: "#ffffff",
-              paddingX: 1.5,
               fontWeight: "bold",
             }}
           >
