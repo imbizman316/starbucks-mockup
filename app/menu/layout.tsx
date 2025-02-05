@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import StickyTitle from "../components/navigation/StickyTitle";
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import { usePathname } from "next/navigation";
 
 interface MenuOption {
   id: number;
@@ -10,6 +13,11 @@ interface MenuOption {
 }
 
 function MenuNav() {
+  const pathname = usePathname();
+  const pathSegments = pathname.split("/").filter(Boolean);
+  const pathnamePart = pathSegments[1]?.toString() || "menu";
+  console.log(pathnamePart);
+
   const menu_options = [
     { id: 1, title: "Menu", link: "/menu" },
     { id: 2, title: "Featured", link: "/menu/featured" },
@@ -18,6 +26,9 @@ function MenuNav() {
   ];
 
   const MenuItem = ({ props }: { props: MenuOption }) => {
+    const textDecoration =
+      props.title.toLowerCase() === pathnamePart ? "underline" : null;
+
     return (
       <Link href={props.link}>
         <Typography
@@ -26,7 +37,7 @@ function MenuNav() {
             fontSize: "13px",
             fontWeight: 400,
             textUnderlineOffset: 8,
-            textDecoration: "underline",
+            textDecoration: textDecoration,
           }}
         >
           {props.title}
