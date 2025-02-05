@@ -26,7 +26,7 @@ function MenuNav() {
   ];
 
   const MenuItem = ({ props }: { props: MenuOption }) => {
-    const textDecoration =
+    const underline =
       props.title.toLowerCase() === pathnamePart ? "underline" : null;
 
     return (
@@ -37,7 +37,7 @@ function MenuNav() {
             fontSize: "13px",
             fontWeight: 400,
             textUnderlineOffset: 8,
-            textDecoration: textDecoration,
+            textDecoration: underline,
           }}
         >
           {props.title}

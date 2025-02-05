@@ -1,0 +1,105 @@
+import { Box, Button, Typography } from "@mui/material";
+
+export const frontPageData = [
+  {
+    id: 1,
+    image: "/images/front-page/top.jpg",
+    description: (
+      <Box
+        sx={{
+          flex: 1,
+          color: "#ffffed",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          display: "flex",
+          paddingX: 20,
+          gap: 3,
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: "50px",
+            fontWeight: 600,
+          }}
+        >
+          More reasons to stay awhile
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: "24px",
+            fontWeight: 400,
+          }}
+        >
+          Mugs, glasses and the condiment bar are back-and all for-here orders
+          include freshly brewed refills on coffee and tea.
+        </Typography>
+        <Button
+          className="buttonPadding"
+          sx={{
+            color: "#ffffed",
+            fontSize: "16px",
+            borderColor: "#ffffed",
+            borderWidth: 1,
+            borderStyle: "solid",
+            borderRadius: "50px",
+            fontWeight: 600,
+          }}
+        >
+          Learn more
+        </Button>
+      </Box>
+    ),
+  },
+  {
+    id: 2,
+    image: "/images/front-page/137-96930.jpg",
+    description: (
+      <Box
+        sx={{
+          flex: 1,
+          color: "#ffffed",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          display: "flex",
+          paddingX: 20,
+          gap: 3,
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: "50px",
+            fontWeight: 600,
+          }}
+        >
+          A big Sunday calls for Starbucks Monday
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: "24px",
+            fontWeight: 400,
+          }}
+        >
+          On Monday 2.10.25, we{`’`}re treating Starbucks® Rewards members to a
+          free tall hot or iced coffee.* Going big for the big game? We{`’`}ve
+          got your back.
+        </Typography>
+        <Button
+          className="buttonPadding"
+          sx={{
+            color: "#ffffed",
+            fontSize: "16px",
+            borderColor: "#ffffed",
+            borderWidth: 1,
+            borderStyle: "solid",
+            borderRadius: "50px",
+            fontWeight: 600,
+          }}
+        >
+          Join Now
+        </Button>
+      </Box>
+    ),
+  },
+];

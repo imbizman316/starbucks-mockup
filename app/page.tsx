@@ -1,77 +1,39 @@
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Image from "next/image";
-import { Button } from "@mui/material";
+import BoxCard from "./components/pages/frontpage/BoxCard";
+import { frontPageData } from "./data/frontpage/data";
+import { boxCard } from "./types/frontpage/type";
 
-function FrontTop() {
+export default function Home() {
+  const latestData: boxCard[] = [
+    { ...frontPageData[frontPageData.length - 1], position: "top" },
+    { ...frontPageData[frontPageData.length - 2], position: "middle" },
+  ];
+
   return (
     <Box
       sx={{
         display: "flex",
-        backgroundColor: "#016243",
+        justifyContent: "center",
+        paddingY: 5,
       }}
     >
-      <Image
-        src="/images/front-page/top.jpg"
-        alt="happy man"
-        width={666}
-        height={578}
-        style={{
-          flex: 1,
-        }}
-      />
       <Box
         sx={{
-          flex: 1,
-          color: "#ffffed",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
           display: "flex",
-          paddingX: 20,
-          gap: 3,
+          flexDirection: "column",
+          gap: 4.5,
+          maxWidth: "1440px",
         }}
       >
-        <Typography
-          sx={{
-            fontSize: "50px",
-            fontWeight: 600,
-          }}
-        >
-          More reasons to stay awhile
-        </Typography>
-        <Typography
-          sx={{
-            fontSize: "24px",
-            fontWeight: 400,
-          }}
-        >
-          Mugs, glasses and the condiment bar are back-and all for-here orders
-          include freshly brewed refills on coffee and tea.
-        </Typography>
-        <Button
-          className="buttonPadding"
-          sx={{
-            color: "#ffffed",
-            fontSize: "16px",
-            borderColor: "#ffffed",
-            borderWidth: 1,
-            borderStyle: "solid",
-            borderRadius: "50px",
-            fontWeight: 600,
-          }}
-        >
-          Learn more
-        </Button>
+        {latestData.map((data, index) => (
+          <BoxCard
+            key={index}
+            position={data.position}
+            image={data.image}
+            description={data.description}
+          />
+        ))}
       </Box>
-    </Box>
-  );
-}
-
-export default function Home() {
-  return (
-    <Box>
-      <FrontTop />
     </Box>
   );
 }

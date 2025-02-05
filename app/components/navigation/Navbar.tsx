@@ -36,6 +36,8 @@ function Navbar() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
+        // borderBottom: "1px gray solid",
+        boxShadow: 1,
       }}
     >
       <Container
