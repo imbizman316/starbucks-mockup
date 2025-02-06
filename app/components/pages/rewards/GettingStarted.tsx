@@ -1,5 +1,6 @@
+import { steps } from "@/app/data/pages/rewards/data";
 import { Box, Typography } from "@mui/material";
-import Link from "next/link";
+// import Link from "next/link";
 import React, { ReactNode } from "react";
 
 type Step = {
@@ -7,63 +8,6 @@ type Step = {
   title: string;
   content: ReactNode;
 };
-
-const stepstyle = {
-  fontSize: 14,
-  fontWeight: 300,
-};
-
-const steps = [
-  {
-    id: 1,
-    title: "Create an account",
-    content: (
-      <Typography sx={stepstyle}>
-        To get started,{" "}
-        <Link
-          href="/rewards"
-          className="underline text-[#036041] hover:no-underline"
-        >
-          join now.
-        </Link>{" "}
-        You can also{" "}
-        <Link
-          href="/rewards"
-          className="underline text-[#036041] hover:no-underline"
-        >
-          join in the app
-        </Link>
-        to get access to the full range of Starbucks Rewards benefits.
-      </Typography>
-    ),
-  },
-  {
-    id: 2,
-    title: "Order and pay how you'd like",
-    content: (
-      <Typography sx={stepstyle}>
-        Use cash, credit/debit card or save some time and pay right through the
-        app. {`You'll`} collect Stars all ways.{" "}
-        <Link
-          href="/rewards"
-          className="underline text-[#036041] hover:no-underline"
-        >
-          Learn how
-        </Link>
-      </Typography>
-    ),
-  },
-  {
-    id: 3,
-    title: "Earn Stars, get Rewards",
-    content: (
-      <Typography sx={stepstyle}>
-        As you earn Stars, you can redeem them for Rewards-like free food,
-        drinks, and more. Start redeeming with as little as 25 Stars!
-      </Typography>
-    ),
-  },
-];
 
 function StepItem({ step }: { step: Step }) {
   return (
