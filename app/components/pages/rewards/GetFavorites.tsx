@@ -4,15 +4,17 @@ import { favorites } from "@/app/data/pages/rewards/data";
 import { Box, Typography } from "@mui/material";
 import React, { useState } from "react";
 import StarIcon from "@mui/icons-material/Star";
+import { favoriteContent } from "@/app/types/rewards/types";
+import Image from "next/image";
 
-const FavoriteItem = () => {
+const FavoriteItem = ({
+  handleMovement,
+  contentIndex,
+}: {
+  contentIndex: number;
+  handleMovement: (index: number) => void;
+}) => {
   const optionWidth = 100;
-
-  const [barMovement, setBarMovement] = useState(0);
-
-  const handleMovement = (index: number) => {
-    setBarMovement(index);
-  };
 
   return (
     <Box
@@ -49,7 +51,7 @@ const FavoriteItem = () => {
             </Typography>
             <hr
               style={{
-                transform: `translate(${optionWidth * barMovement}px)`,
+                transform: `translate(${optionWidth * contentIndex}px)`,
                 transitionDuration: "0.5s",
               }}
               className="border-b-4 border-[#0c704c] border-solid w-[100%] text-lg absolute"
@@ -64,7 +66,7 @@ const FavoriteItem = () => {
               textAlign: "center",
               fontSize: "19px",
               fontWeight: 600,
-              color: "#000000",
+              color: "#152837",
               paddingY: 2,
             }}
           >
@@ -82,21 +84,85 @@ const FavoriteItem = () => {
   );
 };
 
-const FavoriteContentCard = () => {
+const FavoriteContentCard = ({
+  content,
+  opasityDelay,
+}: {
+  content: favoriteContent;
+  opasityDelay: boolean;
+}) => {
   return (
     <Box
       sx={{
-        paddingY: "32px",
+        paddingY: "46px",
         backgroundColor: "#d4e9e2",
         width: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
-      Content Card
+      <Box
+        sx={{
+          opacity: opasityDelay ? 0 : 1,
+          transitionDuration: "0.2s",
+          display: "grid",
+          width: "700px",
+          gridTemplateColumns: "1fr 1fr",
+        }}
+      >
+        <Image
+          src={content.image}
+          alt={content.title}
+          width={350}
+          height={350}
+        />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <Typography
+            sx={{
+              color: "#152837",
+              fontSize: "24px",
+              fontWeight: 600,
+              paddingBottom: "16px",
+              letterSpacing: "0.2px",
+            }}
+          >
+            {content.title}
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: "16px",
+              fontWeight: 400,
+              letterSpacing: "0.2px",
+            }}
+          >
+            {content.sentence}
+          </Typography>
+        </Box>
+      </Box>
     </Box>
   );
 };
 
 const GetFavorites = () => {
+  const [contentIndex, setContentIndex] = useState(0);
+  const [opasityDelay, setOpasityDelay] = useState(false);
+
+  const handleMovement = (index: number) => {
+    setOpasityDelay(true);
+
+    setTimeout(() => {
+      setContentIndex(index);
+      setOpasityDelay(false);
+    }, 200);
+  };
+
   return (
     <Box
       sx={{
@@ -124,9 +190,15 @@ const GetFavorites = () => {
         >
           Get your favorites for free
         </Typography>
-        <FavoriteItem />
+        <FavoriteItem
+          handleMovement={handleMovement}
+          contentIndex={contentIndex}
+        />
       </Box>
-      <FavoriteContentCard></FavoriteContentCard>
+      <FavoriteContentCard
+        content={favorites[contentIndex]}
+        opasityDelay={opasityDelay}
+      />
     </Box>
   );
 };
