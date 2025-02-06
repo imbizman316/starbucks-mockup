@@ -73,7 +73,9 @@ function StepItem({ step }: { step: Step }) {
         // justifyContent: "center",
         flexDirection: "column",
         alignItems: "center",
-        width: "280px",
+        // width: "280px",
+        // width: "auto",
+        maxWidth: "280px",
         gap: 4,
       }}
     >
