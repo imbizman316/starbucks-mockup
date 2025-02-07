@@ -7,3 +7,9 @@ export interface Coffee {
   image: string;
   category: string;
 }
+
+export interface Category {
+  id: string;
+  category: string;
+  created_at: string;
+}

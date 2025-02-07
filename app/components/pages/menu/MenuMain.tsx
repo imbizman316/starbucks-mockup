@@ -4,6 +4,7 @@ import { useCoffeeStore } from "@/app/store/coffeeStore";
 import { Box, CircularProgress, Typography } from "@mui/material";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import HRDivider from "../../michelaneous/HRDivider";
 
 const CoffeeItemCard = ({ image, name }: { image: string; name: string }) => {
   return (
@@ -35,6 +36,7 @@ const CoffeeItemCard = ({ image, name }: { image: string; name: string }) => {
           fontWeight: 600,
           fontSize: "16px",
           color: "##2f2325",
+          textTransform: "capitalize",
         }}
       >
         {name}
@@ -61,12 +63,31 @@ const MenuMain = () => {
 
   return (
     <Box>
-      <Typography>Menu</Typography>
-      <Typography>Coffees</Typography>
+      <Typography
+        sx={{
+          fontWeight: 700,
+          fontSize: "24px",
+          color: "#242b3b",
+          paddingY: 3,
+        }}
+      >
+        Menu
+      </Typography>
+      <Typography
+        sx={{
+          fontWeight: 700,
+          fontSize: "19px",
+          color: "#50524f",
+          paddingBottom: 2,
+        }}
+      >
+        Coffees
+      </Typography>
+      <HRDivider />
       {isLoading ? (
         <CircularProgress />
       ) : (
-        <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+        <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2 }}>
           {coffees.map((coffee) => (
             <CoffeeItemCard
               key={coffee.id}
