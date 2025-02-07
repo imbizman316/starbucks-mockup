@@ -7,9 +7,38 @@ import React, { useEffect, useState } from "react";
 
 const CoffeeItemCard = ({ image, name }: { image: string; name: string }) => {
   return (
-    <Box>
-      <Image src={image} alt={name} width={100} height={100} />
-      <Typography>{name}</Typography>
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        gap: 2,
+      }}
+    >
+      <Box
+        sx={{
+          width: 80,
+          height: 80,
+          overflow: "hidden",
+          borderRadius: "100%",
+        }}
+      >
+        <Image
+          src={image}
+          alt={name}
+          width={300}
+          height={300}
+          className="scale-[180%] translate-y-4"
+        />
+      </Box>
+      <Typography
+        sx={{
+          fontWeight: 600,
+          fontSize: "16px",
+          color: "##2f2325",
+        }}
+      >
+        {name}
+      </Typography>
     </Box>
   );
 };
@@ -37,7 +66,7 @@ const MenuMain = () => {
       {isLoading ? (
         <CircularProgress />
       ) : (
-        <Box>
+        <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
           {coffees.map((coffee) => (
             <CoffeeItemCard
               key={coffee.id}

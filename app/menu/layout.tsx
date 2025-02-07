@@ -16,7 +16,6 @@ function MenuNav() {
   const pathname = usePathname();
   const pathSegments = pathname.split("/").filter(Boolean);
   const pathnamePart = pathSegments[1]?.toString() || "menu";
-  console.log(pathnamePart);
 
   const menu_options = [
     { id: 1, title: "Menu", link: "/menu" },

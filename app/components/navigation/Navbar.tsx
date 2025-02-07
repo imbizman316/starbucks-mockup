@@ -54,6 +54,7 @@ function Navbar() {
             width={50}
             height={50}
             alt="logo"
+            className="min-w-[50px]"
           />
         </Link>
         <Box sx={{ display: "flex", gap: 2, paddingLeft: "2rem" }}>
