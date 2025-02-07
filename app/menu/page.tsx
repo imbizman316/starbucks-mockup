@@ -17,7 +17,7 @@ function MenuPage() {
     fetchCoffeeData();
   }, []);
 
-  return <Box>{coffees[0].name}</Box>;
+  return <Box>{coffees && coffees.length > 0 && coffees[0].name}</Box>;
 }
 
 export default MenuPage;
