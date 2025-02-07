@@ -1,22 +1,36 @@
 "use client";
 
-import { Box } from "@mui/material";
-import React, { useEffect } from "react";
+import { Box, CircularProgress } from "@mui/material";
+import React, { useEffect, useState } from "react";
 
 import { useCoffeeStore } from "../store/coffeeStore";
+import LeftSideMenus from "../components/pages/menu/LeftSideMenus";
+import MenuMain from "../components/pages/menu/MenuMain";
 
 function MenuPage() {
   const { coffees, fetchCoffees } = useCoffeeStore();
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    if (coffees.length === 0) fetchCoffees();
+    async function fetchSequence() {
+      setIsLoading(true);
+
+      if (coffees.length === 0) await fetchCoffees();
+
+      setIsLoading(false);
+    }
+
+    fetchSequence();
   }, [coffees, fetchCoffees]);
 
   return (
-    <Box>
-      {coffees &&
-        coffees.length > 0 &&
-        coffees.map((coffee) => <div key={coffee.id}>{coffee.name}</div>)}
+    <Box
+      sx={{
+        display: "flex",
+      }}
+    >
+      <LeftSideMenus />
+      {isLoading ? <CircularProgress /> : <MenuMain />}
     </Box>
   );
 }
