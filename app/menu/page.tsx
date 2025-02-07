@@ -1,8 +1,23 @@
+"use client";
+
 import { Box } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Coffee } from "../types/menus/types";
 
 function MenuPage() {
-  return <Box>MENU PAGE</Box>;
+  const [coffees, setCoffees] = useState<Coffee[]>([]);
+
+  async function fetchCoffeeData() {
+    const res = await fetch("/api/getCoffee");
+    const coffees = await res.json();
+    setCoffees(coffees);
+  }
+
+  useEffect(() => {
+    fetchCoffeeData();
+  }, []);
+
+  return <Box>{coffees[0].name}</Box>;
 }
 
 export default MenuPage;
