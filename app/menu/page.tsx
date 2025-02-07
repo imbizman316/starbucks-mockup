@@ -1,23 +1,24 @@
 "use client";
 
 import { Box } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import { Coffee } from "../types/menus/types";
+import React, { useEffect } from "react";
+
+import { useCoffeeStore } from "../store/coffeeStore";
 
 function MenuPage() {
-  const [coffees, setCoffees] = useState<Coffee[]>([]);
-
-  async function fetchCoffeeData() {
-    const res = await fetch("/api/getCoffee");
-    const coffees = await res.json();
-    setCoffees(coffees);
-  }
+  const { coffees, fetchCoffees } = useCoffeeStore();
 
   useEffect(() => {
-    fetchCoffeeData();
-  }, []);
+    if (coffees.length === 0) fetchCoffees();
+  }, [coffees, fetchCoffees]);
 
-  return <Box>{coffees && coffees.length > 0 && coffees[0].name}</Box>;
+  return (
+    <Box>
+      {coffees &&
+        coffees.length > 0 &&
+        coffees.map((coffee) => <div key={coffee.id}>{coffee.name}</div>)}
+    </Box>
+  );
 }
 
 export default MenuPage;
