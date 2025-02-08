@@ -1,7 +1,9 @@
 "use client";
 
+import FullTwoDividedCard from "@/app/components/michelaneous/FullTwoDividedCard";
 import CoffeeDescription from "@/app/components/pages/menu/coffee_id/CoffeeDescription";
 import ProductTop from "@/app/components/pages/menu/coffee_id/ProductTop";
+import SizeOptions from "@/app/components/pages/menu/coffee_id/SizeOptions";
 import { useCoffeeStore } from "@/app/store/coffeeStore";
 import { Coffee } from "@/app/types/menus/types";
 import { Box, CircularProgress } from "@mui/material";
@@ -65,7 +67,12 @@ const ProductDetail = () => {
             category={coffeeDetail?.category}
             image={coffeeDetail?.image}
           />
-          <CoffeeDescription />
+          <FullTwoDividedCard
+            color={"#ffffff"}
+            left={<SizeOptions />}
+            right=<SizeOptions />
+          />
+          <CoffeeDescription description={coffeeDetail.description} />
         </Box>
       )}
     </Box>
