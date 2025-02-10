@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Box from "@mui/material/Box";
-import { Button, Container, Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import RoomIcon from "@mui/icons-material/Room";
 import Link from "next/link";
 import { menus } from "@/app/data/navbar/data";
@@ -95,9 +95,10 @@ function Navbar() {
           </Link>
         </Box>
         <Box sx={{ display: "flex", gap: 1 }}>
-          <Button
+          <Link
+            href="/account/login"
             className="buttonPadding"
-            sx={{
+            style={{
               backgroundColor: "#FFFFFF",
               borderRadius: 12,
               fontSize: 10,
@@ -109,10 +110,11 @@ function Navbar() {
             }}
           >
             Sign in
-          </Button>
-          <Button
+          </Link>
+          <Link
+            href="/account/create"
             className="buttonPadding"
-            sx={{
+            style={{
               backgroundColor: "#000000b3",
               borderRadius: 12,
               fontSize: 10,
@@ -121,7 +123,7 @@ function Navbar() {
             }}
           >
             Join now
-          </Button>
+          </Link>
         </Box>
       </Container>
     </Box>
