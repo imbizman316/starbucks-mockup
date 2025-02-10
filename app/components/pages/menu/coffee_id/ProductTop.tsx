@@ -10,7 +10,7 @@ const ProductTop = ({
 {
   name: string;
   price: number;
-  image: string | null;
+  image: string;
   category: string;
 }) => {
   return (
