@@ -1,12 +1,12 @@
 import React from "react";
 
 const GiftPage = () => {
-  const numberCards = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // const numberCards = [2, 3, 4, 5, 6, 7, 8, 9, 10];
   //Each worth their face value
-  const faceCards = ["jack", "queen", "king", "ace"];
+  // const faceCards = ["jack", "queen", "king", "ace"];
   //They worth 10 points, except ace is worth either 1 or 11.
 
-  const startingBankroll = 100;
+  // const startingBankroll = 100;
 
   return (
     <div>
