@@ -21,7 +21,7 @@ const ProductDetail = () => {
     name: "",
     description: "",
     price: 0,
-    image: null,
+    image: "/images/menu/product/placeholder.png",
     category: "",
   });
   const { coffees, fetchCoffees } = useCoffeeStore();
@@ -44,7 +44,7 @@ const ProductDetail = () => {
           name: "",
           description: "",
           price: 0,
-          image: null,
+          image: "/images/menu/product/placeholder.png",
           category: "",
         }
       );
