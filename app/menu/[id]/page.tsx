@@ -6,7 +6,7 @@ import ProductTop from "@/app/components/pages/menu/coffee_id/ProductTop";
 import SizeOptions from "@/app/components/pages/menu/coffee_id/SizeOptions";
 import { useCoffeeStore } from "@/app/store/coffeeStore";
 import { Coffee } from "@/app/types/menus/types";
-import { Box, CircularProgress } from "@mui/material";
+import { Box, Button, CircularProgress } from "@mui/material";
 import { usePathname } from "next/navigation";
 // import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
@@ -75,6 +75,23 @@ const ProductDetail = () => {
           <CoffeeDescription description={coffeeDetail.description} />
         </Box>
       )}
+      <Button
+        sx={{
+          backgroundColor: "#007549",
+          color: "#f0fffd",
+          fontSize: "19px",
+          fontWeight: 600,
+          padding: "18px 24px",
+          borderRadius: "500px",
+          position: "fixed",
+          bottom: "13vh",
+          right: "5vw",
+          boxShadow: "0 0 6px #000000",
+          zIndex: 300,
+        }}
+      >
+        Add to Order
+      </Button>
     </Box>
   );
 };

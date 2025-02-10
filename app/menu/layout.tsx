@@ -5,6 +5,7 @@ import StickyTitle from "../components/navigation/StickyTitle";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import { usePathname } from "next/navigation";
+import BottomCart from "../components/pages/menu/BottomCart";
 
 interface MenuOption {
   id: number;
@@ -70,6 +71,7 @@ export default function MenuLayout({ children }: MenuLayoutProps) {
         <MenuNav />
       </StickyTitle>
       {children}
+      <BottomCart />
     </>
   );
 }
