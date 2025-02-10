@@ -4,12 +4,7 @@ import Box from "@mui/material/Box";
 import { Button, Container, Typography } from "@mui/material";
 import RoomIcon from "@mui/icons-material/Room";
 import Link from "next/link";
-
-const menus = [
-  { id: 1, title: "MENU", link: "/menu" },
-  { id: 2, title: "REWARDS", link: "/rewards" },
-  { id: 3, title: "GIFT CARDS", link: "/gift" },
-];
+import { menus } from "@/app/data/navbar/data";
 
 const MenuItem = ({ link, children }: { link: string; children: string }) => {
   return (
@@ -57,7 +52,19 @@ function Navbar() {
             className="min-w-[50px]"
           />
         </Link>
-        <Box sx={{ display: "flex", gap: 2, paddingLeft: "2rem" }}>
+        <Box
+          sx={{
+            display: {
+              xs: "none",
+              sm: "none",
+              md: "flex",
+              lg: "flex",
+              xl: "flex",
+            },
+            gap: 2,
+            paddingLeft: "2rem",
+          }}
+        >
           {menus.map((menu, index) => (
             <MenuItem link={menu.link} key={index}>
               {menu.title}
@@ -67,7 +74,13 @@ function Navbar() {
       </Container>
       <Container
         sx={{
-          display: "flex",
+          display: {
+            xs: "none",
+            sm: "none",
+            md: "flex",
+            lg: "flex",
+            xl: "flex",
+          },
           alignItems: "center",
           gap: 6,
           justifyContent: "end",
