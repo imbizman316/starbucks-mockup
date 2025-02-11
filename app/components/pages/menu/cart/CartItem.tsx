@@ -2,7 +2,7 @@ import { Coffee } from "@/app/types/menus/types";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import { CoffeeItemCard } from "../CoffeeItemCard";
-import HRDivider from "@/app/components/michelaneous/HRDivider";
+// import HRDivider from "@/app/components/michelaneous/HRDivider";
 import ActionBar from "./ActionBar";
 
 const CartItem = ({ coffeeDetail }: { coffeeDetail: Coffee }) => {
@@ -12,6 +12,10 @@ const CartItem = ({ coffeeDetail }: { coffeeDetail: Coffee }) => {
         maxWidth: "795px",
         width: "100%",
         paddingX: 6,
+        borderRadius: "10px",
+        boxShadow: 1,
+        // border: "1px solid black",
+        backgroundColor: "#ffffff",
       }}
     >
       <Box
@@ -34,11 +38,11 @@ const CartItem = ({ coffeeDetail }: { coffeeDetail: Coffee }) => {
             color: "#291f1d",
           }}
         >
-          ${coffeeDetail.price}
+          ${coffeeDetail.price} X {coffeeDetail.count}
         </Typography>
       </Box>
       <ActionBar id={coffeeDetail.id} />
-      <HRDivider />
+      {/* <HRDivider /> */}
     </Box>
   );
 };

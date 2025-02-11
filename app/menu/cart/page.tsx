@@ -29,23 +29,95 @@ const CartPage = () => {
         alignItems: "center",
         flexDirection: "column",
         paddingY: 3,
+        backgroundColor: "#f9f9f9",
+        gap: 3,
       }}
     >
       {coffeesInCart.map((coffee, index) => (
         <CartItem key={index} coffeeDetail={coffee} />
       ))}
-      <Box>
-        <Box>
-          <Typography>Subtotal</Typography>
-          <Typography>${subTotal.toFixed(2)}</Typography>
+      <Box
+        sx={{
+          width: "100%",
+          maxWidth: "795px",
+          paddingX: 6,
+          borderRadius: "10px",
+          boxShadow: 1,
+          // border: "1px solid black",
+          backgroundColor: "#ffffff",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Typography sx={{ color: "#6e6e76", fontSize: "16px" }}>
+            Subtotal
+          </Typography>
+          <Box
+            sx={{
+              borderBottom: "1px dotted gray",
+              width: "100%",
+              marginX: 4,
+            }}
+          />
+          <Typography
+            sx={{ color: "#25262a", fontWeight: 700, fontSize: "16px" }}
+          >
+            ${subTotal.toFixed(2)}
+          </Typography>
         </Box>
-        <Box>
-          <Typography>Tax</Typography>
-          <Typography>${tax.toFixed(2)}</Typography>
+        <Box
+          sx={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Typography sx={{ color: "#6e6e76", fontSize: "16px" }}>
+            Tax
+          </Typography>
+          <Box
+            sx={{
+              borderBottom: "1px dotted gray",
+              width: "100%",
+              marginX: 4,
+            }}
+          />
+          <Typography
+            sx={{ color: "#25262a", fontWeight: 700, fontSize: "16px" }}
+          >
+            ${tax.toFixed(2)}
+          </Typography>
         </Box>
-        <Box>
-          <Typography>Total</Typography>
-          <Typography>${(subTotal + tax).toFixed(2)}</Typography>
+        <Box
+          sx={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Typography sx={{ fontSize: "24px", fontWeight: 700 }}>
+            Total
+          </Typography>
+          <Box
+            sx={{
+              borderBottom: "1px dotted gray",
+              width: "100%",
+              marginX: 4,
+            }}
+          />
+          <Typography
+            sx={{ fontSize: "24px", fontWeight: 700, color: "#2e2111" }}
+          >
+            ${(subTotal + tax).toFixed(2)}
+          </Typography>
         </Box>
       </Box>
     </Box>

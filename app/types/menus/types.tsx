@@ -6,6 +6,7 @@ export interface Coffee {
   price: number;
   image: string;
   category: string;
+  count?: number;
 }
 
 export interface Category {

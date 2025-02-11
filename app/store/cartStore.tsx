@@ -10,9 +10,23 @@ type CartStore = {
 export const useCartStore = create<CartStore>((set) => ({
   coffeesInCart: [],
   addToCart: (coffee) => {
-    set((state) => ({
-      coffeesInCart: [...state.coffeesInCart, coffee],
-    }));
+    set((state) => {
+      const existingCoffee = state.coffeesInCart.find(
+        (c) => c.id === coffee.id
+      );
+
+      if (existingCoffee) {
+        return {
+          coffeesInCart: state.coffeesInCart.map((c) =>
+            c.id === coffee.id && c.count ? { ...c, count: c.count + 1 } : c
+          ),
+        };
+      } else {
+        return {
+          coffeesInCart: [...state.coffeesInCart, { ...coffee, count: 1 }],
+        };
+      }
+    });
   },
   removeFromCart: (id) => {
     set((state) => ({
@@ -20,29 +34,3 @@ export const useCartStore = create<CartStore>((set) => ({
     }));
   },
 }));
-
-// import { create } from "zustand";
-// import { Coffee } from "../types/menus/types";
-
-// type CoffeeStore = {
-//   coffees: Coffee[];
-//   fetchCoffees: () => Promise<void>;
-// };
-
-// export const useCoffeeStore = create<CoffeeStore>((set) => ({
-//   coffees: [],
-//   fetchCoffees: async () => {
-//     try {
-//       const response = await fetch("/api/getCoffee");
-
-//       if (!response.ok) {
-//         throw new Error("Failed to fetch coffee menu");
-//       }
-
-//       const data = await response.json();
-//       set({ coffees: data });
-//     } catch (error) {
-//       console.error("Error fetching coffee menu:", error);
-//     }
-//   },
-// }));
