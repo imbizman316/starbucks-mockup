@@ -1,10 +1,13 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import { Container, Typography } from "@mui/material";
 import RoomIcon from "@mui/icons-material/Room";
 import Link from "next/link";
 import { menus } from "@/app/data/navbar/data";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const MenuItem = ({ link, children }: { link: string; children: string }) => {
   return (
@@ -22,6 +25,8 @@ const MenuItem = ({ link, children }: { link: string; children: string }) => {
 };
 
 function Navbar() {
+  const [openHamburger, setOpenHamburger] = useState(false);
+
   return (
     <Box
       sx={{
@@ -126,6 +131,20 @@ function Navbar() {
           </Link>
         </Box>
       </Container>
+      <MenuIcon
+        sx={{
+          display: {
+            xs: "block",
+            sm: "block",
+            md: "none",
+            lg: "none",
+            xl: "none",
+          },
+          fontSize: "40px",
+          cursor: "pointer",
+        }}
+        onClick={() => setOpenHamburger(!openHamburger)}
+      />
     </Box>
   );
 }

@@ -84,7 +84,7 @@ export const frontPageData: boxCard[] = [
           justifyContent: "center",
           flexDirection: "column",
           display: "flex",
-          paddingX: 20,
+          // paddingX: 20,
           gap: 3,
         }}
       >
@@ -135,7 +135,7 @@ export const frontPageData: boxCard[] = [
           justifyContent: "center",
           flexDirection: "column",
           display: "flex",
-          paddingX: 20,
+          // paddingX: 20,
           gap: 3,
         }}
       >
@@ -186,7 +186,7 @@ export const frontPageData: boxCard[] = [
           justifyContent: "center",
           flexDirection: "column",
           display: "flex",
-          paddingX: 20,
+          // paddingX: 20,
           gap: 3,
         }}
       >
