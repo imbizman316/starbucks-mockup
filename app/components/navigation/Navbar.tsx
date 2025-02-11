@@ -156,7 +156,7 @@ function Navbar() {
             // alignItems: "center",
             // justifyContent: "center",
             width: "100vw",
-            top: "114.5px",
+            top: "115px",
             right: 0,
             // overflow: "hidden",
           }}
