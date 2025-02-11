@@ -178,7 +178,79 @@ function Navbar() {
                 right: 0,
               }}
             >
-              Hey yo
+              <Container
+                sx={{
+                  // paddingX: "2rem",
+                  paddingY: "1rem",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <Link href={"/"}></Link>
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 2,
+                    paddingLeft: "2rem",
+                    flexDirection: "column",
+                  }}
+                >
+                  {menus.map((menu, index) => (
+                    <MenuItem link={menu.link} key={index}>
+                      {menu.title}
+                    </MenuItem>
+                  ))}
+                </Box>
+              </Container>
+              <Container
+                sx={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: 6,
+                  justifyContent: "flex-start",
+                  flexDirection: "column",
+                }}
+              >
+                <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
+                  <RoomIcon />
+                  <Link href={"/store-locator"}>
+                    <Typography sx={{ fontSize: 14, fontWeight: "bold" }}>
+                      Find a store
+                    </Typography>
+                  </Link>
+                </Box>
+                <Box sx={{ display: "flex", gap: 1 }}>
+                  <Link
+                    href="/account/login"
+                    className="buttonPadding"
+                    style={{
+                      backgroundColor: "#FFFFFF",
+                      borderRadius: 12,
+                      fontSize: 10,
+                      color: "#000000b3",
+                      fontWeight: "bold",
+                      borderColor: "#000000b3",
+                      borderBlockStyle: "solid",
+                      borderWidth: "0.1rem",
+                    }}
+                  >
+                    Sign in
+                  </Link>
+                  <Link
+                    href="/account/create"
+                    className="buttonPadding"
+                    style={{
+                      backgroundColor: "#000000b3",
+                      borderRadius: 12,
+                      fontSize: 10,
+                      color: "#ffffff",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Join now
+                  </Link>
+                </Box>
+              </Container>
             </Box>
             <Box
               sx={{
