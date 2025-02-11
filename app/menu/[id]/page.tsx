@@ -4,6 +4,7 @@ import FullTwoDividedCard from "@/app/components/michelaneous/FullTwoDividedCard
 import CoffeeDescription from "@/app/components/pages/menu/coffee_id/CoffeeDescription";
 import ProductTop from "@/app/components/pages/menu/coffee_id/ProductTop";
 import SizeOptions from "@/app/components/pages/menu/coffee_id/SizeOptions";
+import { useCartStore } from "@/app/store/cartStore";
 import { useCoffeeStore } from "@/app/store/coffeeStore";
 import { Coffee } from "@/app/types/menus/types";
 import { Box, Button, CircularProgress } from "@mui/material";
@@ -25,6 +26,9 @@ const ProductDetail = () => {
     category: "",
   });
   const { coffees, fetchCoffees } = useCoffeeStore();
+
+  const { addToCart } = useCartStore();
+
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -89,6 +93,7 @@ const ProductDetail = () => {
           boxShadow: "0 0 6px #000000",
           zIndex: 300,
         }}
+        onClick={() => addToCart(coffeeDetail)}
       >
         Add to Order
       </Button>
