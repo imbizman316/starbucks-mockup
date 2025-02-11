@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useCartStore } from "@/app/store/cartStore";
+import Link from "next/link";
 
 const BottomCart = () => {
   const { coffeesInCart } = useCartStore();
@@ -21,8 +22,10 @@ const BottomCart = () => {
         zIndex: 300,
       }}
     >
-      <Typography sx={{ color: "white" }}>{coffeesInCart.length}</Typography>
-      <ShoppingCartIcon sx={{ color: "white", fontSize: "45px" }} />
+      <Link href="/menu/cart">
+        <Typography sx={{ color: "white" }}>{coffeesInCart.length}</Typography>
+        <ShoppingCartIcon sx={{ color: "white", fontSize: "45px" }} />
+      </Link>
     </Box>
   );
 };

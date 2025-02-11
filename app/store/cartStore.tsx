@@ -4,6 +4,7 @@ import { Coffee } from "../types/menus/types";
 type CartStore = {
   coffeesInCart: Coffee[];
   addToCart: (coffee: Coffee) => void;
+  removeFromCart: (id: string) => void;
 };
 
 export const useCartStore = create<CartStore>((set) => ({
@@ -11,6 +12,11 @@ export const useCartStore = create<CartStore>((set) => ({
   addToCart: (coffee) => {
     set((state) => ({
       coffeesInCart: [...state.coffeesInCart, coffee],
+    }));
+  },
+  removeFromCart: (id) => {
+    set((state) => ({
+      coffeesInCart: state.coffeesInCart.filter((coffee) => coffee.id !== id),
     }));
   },
 }));
