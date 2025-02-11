@@ -31,18 +31,20 @@ function Navbar() {
     <Box
       sx={{
         width: "100%",
-        paddingX: "2rem",
+        // paddingX: "2rem",
         paddingY: "1rem",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
         // borderBottom: "1px gray solid",
         boxShadow: 1,
+        position: "relative",
+        // overflow: "hidden",
       }}
     >
       <Container
         sx={{
-          paddingX: "2rem",
+          // paddingX: "2rem",
           paddingY: "1rem",
           display: "flex",
           alignItems: "center",
@@ -145,6 +147,51 @@ function Navbar() {
         }}
         onClick={() => setOpenHamburger(!openHamburger)}
       />
+      {openHamburger && (
+        <Box
+          sx={{
+            height: "100vh",
+            position: "absolute",
+            // display: "flex",
+            // alignItems: "center",
+            // justifyContent: "center",
+            width: "100vw",
+            top: "114.5px",
+            right: 0,
+            // overflow: "hidden",
+          }}
+          onClick={() => setOpenHamburger(false)}
+        >
+          <Box
+            sx={{
+              position: "relative",
+            }}
+          >
+            <Box
+              sx={{
+                backgroundColor: "white",
+                height: "100vh",
+                width: "60vw",
+                position: "absolute",
+                zIndex: 400,
+                right: 0,
+              }}
+            >
+              Hey yo
+            </Box>
+            <Box
+              sx={{
+                position: "absolute",
+                height: "100vh",
+                width: "100vw",
+                backgroundColor: "black",
+                opacity: "30%",
+                // left: "-100px",
+              }}
+            />
+          </Box>
+        </Box>
+      )}
     </Box>
   );
 }
