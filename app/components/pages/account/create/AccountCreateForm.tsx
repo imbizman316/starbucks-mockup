@@ -75,6 +75,7 @@ const AccountCreateForm = () => {
         p: 3,
         border: "1px solid #ddd",
         borderRadius: 2,
+        boxShadow: 3,
       }}
     >
       <Typography variant="h5" gutterBottom>
@@ -122,10 +123,13 @@ const AccountCreateForm = () => {
         <Button
           type="submit"
           variant="contained"
-          color="primary"
           fullWidth
           sx={{ mt: 2 }}
           disabled={isSubmitting}
+          style={{
+            backgroundColor: "#1f654b",
+            borderRadius: "50px",
+          }}
         >
           {isSubmitting ? <CircularProgress size={24} /> : "Sign Up"}
         </Button>
