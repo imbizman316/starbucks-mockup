@@ -9,9 +9,23 @@ function BoxCard({ image, description, position, color }: boxCard) {
       sx={{
         display: "grid",
         width: "100%",
-        gridTemplateColumns: "1fr 1fr",
+        gridTemplateColumns: {
+          xs: "none",
+          sm: "none",
+          md: "1fr 1fr",
+          lg: "1fr 1fr",
+          xl: "1fr 1fr",
+        },
+        gridTemplateRows: {
+          xs: "1fr 1fr",
+          sm: "1fr 1fr",
+          md: "none",
+          lg: "none",
+          xl: "none",
+        },
         backgroundColor: color,
         minHeight: "600px",
+        flexDirection: "column",
       }}
     >
       {position === "middle" && description}
@@ -27,7 +41,16 @@ function BoxCard({ image, description, position, color }: boxCard) {
             width: "100%",
             height: "100%",
             backgroundImage: `url(${image})`,
-            backgroundSize: "cover",
+            backgroundPosition: "center",
+            // backgroundSize: "cover",
+            backgroundSize: {
+              xs: "contain",
+              sm: "contain",
+              md: "contain",
+              lg: "cover",
+              xl: "cover",
+            },
+            backgroundRepeat: "no-repeat",
           }}
         />
       </Box>

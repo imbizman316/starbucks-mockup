@@ -22,55 +22,6 @@ const getFontColor = (color: color): fontColor => {
   return fontColor;
 };
 
-// const FrontPageCardItem = () => {
-//   return (
-//     <Box
-//       sx={{
-//         flex: 1,
-//         color: getFontColor("#f4f3ef"),
-//         alignItems: "center",
-//         justifyContent: "center",
-//         flexDirection: "column",
-//         display: "flex",
-//         paddingX: 20,
-//         gap: 3,
-//       }}
-//     >
-//       <Typography
-//         sx={{
-//           fontSize: "50px",
-//           fontWeight: 600,
-//         }}
-//       >
-//         Crafted with love
-//       </Typography>
-//       <Typography
-//         sx={{
-//           fontSize: "24px",
-//           fontWeight: 400,
-//         }}
-//       >
-//         Embrace the season with a Chocolate Hazelnut Cookie Cold Brew and
-//         Chocolate-Covered Strawberry Crème Frappuccino® blended beverage.
-//       </Typography>
-//       <Button
-//         className="buttonPadding"
-//         sx={{
-//           color: "#ffffed",
-//           fontSize: "16px",
-//           borderColor: "#ffffed",
-//           borderWidth: 1,
-//           borderStyle: "solid",
-//           borderRadius: "50px",
-//           fontWeight: 600,
-//         }}
-//       >
-//         Learn more
-//       </Button>
-//     </Box>
-//   );
-// };
-
 export const frontPageData: boxCard[] = [
   {
     id: 0,
