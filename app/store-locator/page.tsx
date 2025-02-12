@@ -24,9 +24,11 @@ function StoreLocatorPage() {
     <Box
       sx={{
         display: "flex",
-        flexDirection: { xs: "column", md: "row" },
-        alignItems: "stretch",
-        height: "85vh",
+        flexDirection: { xs: "column", md: "column" },
+        // alignItems: "stretch",
+        alignItems: "start",
+        height: "70vh",
+        width: "70vh",
         p: 0.1,
       }}
     >
@@ -35,6 +37,7 @@ function StoreLocatorPage() {
           width: {
             xs: "100%",
             md: "35%",
+            sm: "35%",
           },
         }}
       >
