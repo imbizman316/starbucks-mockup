@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import { Container, Typography } from "@mui/material";
 import RoomIcon from "@mui/icons-material/Room";
@@ -15,7 +15,7 @@ const MenuItem = ({ link, children }: { link: string; children: string }) => {
       <Typography
         sx={{
           fontWeight: "bold",
-          fontSize: 15,
+          fontSize: 16,
         }}
       >
         {children}
@@ -26,6 +26,16 @@ const MenuItem = ({ link, children }: { link: string; children: string }) => {
 
 function Navbar() {
   const [openHamburger, setOpenHamburger] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth > 899) setOpenHamburger(false);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <Box
@@ -205,20 +215,13 @@ function Navbar() {
               <Container
                 sx={{
                   display: "flex",
-                  alignItems: "flex-start",
-                  gap: 6,
-                  justifyContent: "flex-start",
+                  // alignItems: "flex-start",
+                  gap: 2,
+                  paddingLeft: 6,
+                  // justifyContent: "flex-start",
                   flexDirection: "column",
                 }}
               >
-                <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
-                  <RoomIcon />
-                  <Link href={"/store-locator"}>
-                    <Typography sx={{ fontSize: 14, fontWeight: "bold" }}>
-                      Find a store
-                    </Typography>
-                  </Link>
-                </Box>
                 <Box sx={{ display: "flex", gap: 1 }}>
                   <Link
                     href="/account/login"
@@ -248,6 +251,14 @@ function Navbar() {
                     }}
                   >
                     Join now
+                  </Link>
+                </Box>
+                <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
+                  <RoomIcon />
+                  <Link href={"/store-locator"}>
+                    <Typography sx={{ fontSize: 14, fontWeight: "bold" }}>
+                      Find a store
+                    </Typography>
                   </Link>
                 </Box>
               </Container>
