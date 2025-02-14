@@ -1,41 +1,217 @@
 "use client";
 
+import { Box, Typography } from "@mui/material";
+import Image from "next/image";
+// import { useState } from "react";
+
 // import React, { useState } from "react";
 
+const ScreenSizes = {
+  normalWholeWidth: "384px",
+  normalImageWidth: 336,
+  smallWholeWidth: "327px",
+  smallImageWidth: 279,
+  normalimageHeight: 200,
+  smallImageHeight: 200,
+  normalWholeHeight: "528px",
+};
+
+const Colors = {
+  yellow: "#F4D04E",
+  fontColor: "#111111",
+  grayColor: "#6B6B6B",
+};
+
+const FontSizes = {
+  header: "24px",
+  subHeader: "14px",
+  description: "16px",
+  mobileSubHeader: "12px",
+  mobileHeader: "20px",
+};
+
 const GiftPage = () => {
-  // const numberCards = [2, 3, 4, 5, 6, 7, 8, 9, 10];
-  //Each worth their face value
-  // const faceCards = ["jack", "queen", "king", "ace"];
-  //They worth 10 points, except ace is worth either 1 or 11.
-  // const startingBankroll = 100;
-  // const [playerFunds, setPlayerFunds] = useState<number>(100);
-  // const [playerBet, setPlayerBet] = useState<number>(0);
-  // function isPlayerBetValid({ bet }: { bet: number }): boolean {
-  //   if (typeof bet === "number") {
-  //     if (bet > playerFunds || bet < 0) {
-  //       return false;
-  //     }
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
-  // function handleBetChange(bet: number | string | null | "NaN") {
-  //   if (typeof bet === "number") {
-  //     if (isPlayerBetValid(bet)) setPlayerBet(bet);
-  //   }
-  // }
-  // return (
-  //   <div>
-  //     <h1 className="font-bold text-2xl">Black Jack Card Game</h1>
-  //     <input
-  //       placeholder="place your bet"
-  //       onChange={(e) => handleBetChange(parseInt(e.target.value))}
-  //       value={playerBet}
-  //       type="number"
-  //     />
-  //   </div>
-  // );
+  return (
+    <Box
+      sx={{
+        width: "100%",
+        height: "100vh",
+        backgroundColor: "#F4D04E",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Box
+        sx={{
+          backgroundColor: "#FFFFFF",
+          width: {
+            xs: ScreenSizes.smallWholeWidth,
+            sm: ScreenSizes.smallWholeWidth,
+            md: ScreenSizes.smallWholeWidth,
+            lg: ScreenSizes.normalWholeWidth,
+            xl: ScreenSizes.normalWholeWidth,
+          },
+          height: "auto",
+          border: "1px #111111 solid",
+          padding: "24px",
+          borderRadius: "20px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "24px",
+          color: Colors.fontColor,
+        }}
+        boxShadow="10px 10px"
+      >
+        <Image
+          src="/images/frontend_challenge/illustration-article.svg"
+          width={336}
+          height={200}
+          alt="illustration"
+          style={{
+            borderRadius: "10px",
+          }}
+        />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+            gap: "12px",
+          }}
+        >
+          <Typography
+            sx={{
+              borderRadius: "4px",
+              backgroundColor: "#F4D04E",
+              paddingY: "4px",
+              paddingX: "12px",
+              fontWeight: 800,
+              fontSize: FontSizes.subHeader,
+            }}
+          >
+            Learning
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: FontSizes.subHeader,
+              color: Colors.fontColor,
+            }}
+          >
+            Published 21 Dec 2023
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: FontSizes.header,
+              fontWeight: 800,
+              letterSpacing: -1,
+              wordSpacing: -3,
+            }}
+          >
+            HTML & CSS foundations
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: FontSizes.description,
+              color: Colors.grayColor,
+            }}
+          >
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            gap: "12px",
+            alignItems: "center",
+          }}
+        >
+          <Image
+            src={"/images/frontend_challenge/image-avatar.webp"}
+            width={32}
+            height={32}
+            alt="profile"
+          />
+          <Typography
+            sx={{
+              fontWeight: 800,
+              fontSize: FontSizes.subHeader,
+            }}
+          >
+            Gretg Hooper
+          </Typography>
+        </Box>
+      </Box>
+    </Box>
+  );
 };
 
 export default GiftPage;
+
+//interface Selected {
+//   coffee: string;
+//   added: string;
+// }
+
+// const [currentTheme, setCurrentTheme] = useState("");
+// const [selected, setSelected] = useState<Selected>({
+//   coffee: "",
+//   added: "",
+// });
+
+// const Result = () => {
+//   return (
+//     <div>
+//       You want {selected.coffee} with {selected.added}, right?
+//     </div>
+//   );
+// };
+
+// const handleClick = (e) => {
+//   e.preventDefault();
+
+//   console.log(currentTheme);
+//   setSelected({
+//     ...selected,
+//     [currentTheme]: e.target.name,
+//   });
+// };
+
+// const items = [
+//   {
+//     theme: "coffee",
+//     question: "Which coffee?",
+//     selection: ["americano", "tea", "milk"],
+//   },
+//   {
+//     theme: "added",
+//     question: "What to add?",
+//     selection: ["sugar", "salt", "cream"],
+//   },
+// ];
+
+// const SelectItem = ({ item }) => {
+//   return (
+//     <div>
+//       <div>{item.question}</div>
+//       <div onClick={() => setCurrentTheme(item.theme)}>
+//         {item.selection.map((select, index) => (
+//           <Button key={index} name={select} onClick={handleClick}>
+//             {select}
+//           </Button>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// return (
+//   <div className="pl-10">
+//     {items.map((item, index) => (
+//       <SelectItem key={index} item={item} />
+//     ))}
+//     <Button color="primary">Finish</Button>
+//     <Result />
+//   </div>
+// );
