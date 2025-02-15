@@ -155,6 +155,7 @@ function Navbar() {
           },
           fontSize: "40px",
           cursor: "pointer",
+          marginRight: "16px",
         }}
         onClick={() => setOpenHamburger(!openHamburger)}
       />
