@@ -31,6 +31,7 @@ export const CoffeeItemCard = ({
           sx={{
             width: 80,
             height: 80,
+            minWidth: 80,
             overflow: "hidden",
             borderRadius: "100%",
           }}

@@ -52,7 +52,19 @@ const MenuMain = () => {
       {isLoading ? (
         <CircularProgress />
       ) : (
-        <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2 }}>
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: {
+              xl: "1fr 1fr",
+              lg: "1fr 1fr",
+              md: "1fr 1fr",
+              sm: "1fr",
+              xs: "1fr",
+            },
+            gap: 2,
+          }}
+        >
           {coffees.map((coffee) => (
             <CoffeeItemCard
               key={coffee.id}
