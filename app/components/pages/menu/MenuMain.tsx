@@ -23,7 +23,11 @@ const MenuMain = () => {
   }, [coffees, fetchCoffees]);
 
   return (
-    <Box>
+    <Box
+      sx={{
+        paddingX: 7,
+      }}
+    >
       <Typography
         sx={{
           fontWeight: 700,

@@ -44,7 +44,12 @@ const ProductTop = ({
           },
         }}
       >
-        <Image src={image} alt={name} width={300} height={300} />
+        <Image
+          src={`/images/menu/product/${image}`}
+          alt={name}
+          width={300}
+          height={300}
+        />
       </Box>
       <Box
         sx={{

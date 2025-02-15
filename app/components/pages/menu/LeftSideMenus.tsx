@@ -27,7 +27,7 @@ const LeftSideMenus = () => {
         gap: 3,
         width: "200px",
         paddingY: 5,
-        paddingX: 2,
+        paddingX: 7,
       }}
     >
       {categories.map((category, index) => (

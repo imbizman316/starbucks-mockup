@@ -17,7 +17,7 @@ function StickyTitle({
         position: "sticky",
         top: 0,
         zIndex: 1000,
-        paddingLeft: 16,
+        paddingLeft: 7,
       }}
     >
       {children}

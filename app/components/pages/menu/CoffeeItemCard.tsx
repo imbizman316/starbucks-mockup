@@ -19,7 +19,14 @@ export const CoffeeItemCard = ({
         gap: 2,
       }}
     >
-      <Link href={`/menu/${id}`}>
+      <Link
+        href={`/menu/${id}`}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 13,
+        }}
+      >
         <Box
           sx={{
             width: 80,
@@ -29,7 +36,7 @@ export const CoffeeItemCard = ({
           }}
         >
           <Image
-            src={image}
+            src={`/images/menu/product/${image}`}
             alt={name}
             width={300}
             height={300}
