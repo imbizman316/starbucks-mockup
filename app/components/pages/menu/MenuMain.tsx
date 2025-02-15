@@ -50,7 +50,17 @@ const MenuMain = () => {
       </Typography>
       <HRDivider />
       {isLoading ? (
-        <CircularProgress />
+        <Box
+          sx={{
+            display: "flex",
+            width: "100%",
+            height: "50vh",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <CircularProgress />
+        </Box>
       ) : (
         <Box
           sx={{

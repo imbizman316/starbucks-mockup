@@ -33,16 +33,8 @@ const ProductDetail = () => {
 
   useEffect(() => {
     async function fetchSequence() {
-      setIsLoading(true);
-
-      if (coffees.length === 0 || coffees === null || coffees === undefined) {
-        await fetchCoffees();
-      }
-
-      const coffeeFound = coffees.find((coffee) => coffee.id === id);
-
-      setCoffeeDetail(
-        coffeeFound || {
+      try {
+        setCoffeeDetail({
           id: "",
           created_at: "",
           name: "",
@@ -50,21 +42,48 @@ const ProductDetail = () => {
           price: 0,
           image: "/images/menu/product/placeholder.png",
           category: "",
-        }
-      );
+        });
+        setIsLoading(true);
+        if (coffees.length === 0) await fetchCoffees();
 
-      setIsLoading(false);
+        console.log(coffees);
+
+        const coffeeFound = coffees.find((coffee) => coffee.id === id);
+
+        if (coffeeFound) setCoffeeDetail(coffeeFound);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setIsLoading(false);
+      }
     }
 
     fetchSequence();
   }, [coffees, fetchCoffees, id]);
+  // }, [coffees, fetchCoffees, id]);
 
   return (
-    <Box>
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       {isLoading ? (
-        <CircularProgress />
+        <Box
+          sx={{
+            display: "flex",
+            width: "100%",
+            height: "80vh",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <CircularProgress />
+        </Box>
       ) : (
-        <Box>
+        <Box sx={{ width: "100%" }}>
           <ProductTop
             name={coffeeDetail?.name}
             price={coffeeDetail?.price}
@@ -76,7 +95,7 @@ const ProductDetail = () => {
             left={<SizeOptions />}
             right=<SizeOptions />
           />
-          <CoffeeDescription description={coffeeDetail.description} />
+          <CoffeeDescription description={coffeeDetail?.description} />
         </Box>
       )}
       <Button
