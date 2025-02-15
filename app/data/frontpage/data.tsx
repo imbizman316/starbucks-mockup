@@ -22,55 +22,75 @@ const getFontColor = (color: color): fontColor => {
   return fontColor;
 };
 
+const CardTextPart = ({
+  title,
+  content,
+  button,
+}: {
+  title: string;
+  content: string;
+  button: string;
+}) => {
+  return (
+    <Box
+      sx={{
+        flex: 1,
+        color: getFontColor("#016243"),
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+        display: "flex",
+        // paddingX: 20,
+        gap: 3,
+        maxWidth: "666px",
+        paddingX: 5,
+        paddingY: 3,
+      }}
+    >
+      <Typography
+        sx={{
+          fontSize: "24px",
+          fontWeight: 600,
+        }}
+      >
+        {title}
+      </Typography>
+      <Typography
+        sx={{
+          fontSize: "19px",
+          fontWeight: 400,
+        }}
+      >
+        {content}
+      </Typography>
+      <Button
+        className="buttonPadding"
+        sx={{
+          color: "#ffffed",
+          fontSize: "14px",
+          borderColor: "#ffffed",
+          borderWidth: 1,
+          borderStyle: "solid",
+          borderRadius: "50px",
+          fontWeight: 600,
+        }}
+      >
+        {button}
+      </Button>
+    </Box>
+  );
+};
+
 export const frontPageData: boxCard[] = [
   {
     id: 0,
     image: "/images/front-page/137-96866.webp",
     description: (
-      <Box
-        sx={{
-          flex: 1,
-          color: getFontColor("#f4f3ef"),
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          display: "flex",
-          // paddingX: 20,
-          gap: 3,
-        }}
-      >
-        <Typography
-          sx={{
-            fontSize: "50px",
-            fontWeight: 600,
-          }}
-        >
-          Crafted with love
-        </Typography>
-        <Typography
-          sx={{
-            fontSize: "24px",
-            fontWeight: 400,
-          }}
-        >
-          Embrace the season with a Chocolate Hazelnut Cookie Cold Brew and
-          Chocolate-Covered Strawberry Crème Frappuccino® blended beverage.
-        </Typography>
-        <Button
-          className="buttonPadding"
-          sx={{
-            color: "#ffffed",
-            fontSize: "16px",
-            borderColor: "#ffffed",
-            borderWidth: 1,
-            borderStyle: "solid",
-            borderRadius: "50px",
-            fontWeight: 600,
-          }}
-        >
-          Learn more
-        </Button>
-      </Box>
+      <CardTextPart
+        title="Crafted with love"
+        content="Embrace the season with a Chocolate Hazelnut Cookie Cold Brew and Chocolate-Covered Strawberry Crème Frappuccino® blended beverage."
+        button="learn more"
+      />
     ),
     color: "#f4f3ef",
   },
@@ -78,50 +98,11 @@ export const frontPageData: boxCard[] = [
     id: 1,
     image: "/images/front-page/top.jpg",
     description: (
-      <Box
-        sx={{
-          flex: 1,
-          color: getFontColor("#016243"),
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          display: "flex",
-          // paddingX: 20,
-          gap: 3,
-        }}
-      >
-        <Typography
-          sx={{
-            fontSize: "50px",
-            fontWeight: 600,
-          }}
-        >
-          More reasons to stay awhile
-        </Typography>
-        <Typography
-          sx={{
-            fontSize: "24px",
-            fontWeight: 400,
-          }}
-        >
-          Mugs, glasses and the condiment bar are back-and all for-here orders
-          include freshly brewed refills on coffee and tea.
-        </Typography>
-        <Button
-          className="buttonPadding"
-          sx={{
-            color: "#ffffed",
-            fontSize: "16px",
-            borderColor: "#ffffed",
-            borderWidth: 1,
-            borderStyle: "solid",
-            borderRadius: "50px",
-            fontWeight: 600,
-          }}
-        >
-          Learn more
-        </Button>
-      </Box>
+      <CardTextPart
+        title="More reasons to stay awhile"
+        content="Mugs, glasses and the condiment bar are back-and all for-here orders include freshly brewed refills on coffee and tea."
+        button="learn more"
+      />
     ),
     color: "#016243",
   },
@@ -129,51 +110,11 @@ export const frontPageData: boxCard[] = [
     id: 2,
     image: "/images/front-page/137-96930.jpg",
     description: (
-      <Box
-        sx={{
-          flex: 1,
-          color: getFontColor("#016243"),
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          display: "flex",
-          // paddingX: 20,
-          gap: 3,
-        }}
-      >
-        <Typography
-          sx={{
-            fontSize: "50px",
-            fontWeight: 600,
-          }}
-        >
-          A big Sunday calls for Starbucks Monday
-        </Typography>
-        <Typography
-          sx={{
-            fontSize: "24px",
-            fontWeight: 400,
-          }}
-        >
-          On Monday 2.10.25, we{`’`}re treating Starbucks® Rewards members to a
-          free tall hot or iced coffee.* Going big for the big game? We{`’`}ve
-          got your back.
-        </Typography>
-        <Button
-          className="buttonPadding"
-          sx={{
-            color: "#ffffed",
-            fontSize: "16px",
-            borderColor: "#ffffed",
-            borderWidth: 1,
-            borderStyle: "solid",
-            borderRadius: "50px",
-            fontWeight: 600,
-          }}
-        >
-          Join Now
-        </Button>
-      </Box>
+      <CardTextPart
+        title="A big Sunday calls for Starbucks Monday"
+        content="On Monday 2.10.25, we’re treating Starbucks® Rewards members to a free tall hot or iced coffee.* Going big for the big game? We’ve got your back."
+        button="join now"
+      />
     ),
     color: "#016243",
   },

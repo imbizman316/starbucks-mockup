@@ -11,24 +11,40 @@ function BoxCard({ image, description, position, color }: boxCard) {
         width: "100%",
         gridTemplateColumns: {
           xs: "none",
-          sm: "none",
+          sm: "1fr 1fr",
           md: "1fr 1fr",
           lg: "1fr 1fr",
           xl: "1fr 1fr",
         },
         gridTemplateRows: {
           xs: "1fr 1fr",
-          sm: "1fr 1fr",
+          sm: "none",
           md: "none",
           lg: "none",
           xl: "none",
         },
         backgroundColor: color,
-        minHeight: "600px",
+        height: {
+          xl: "500px",
+          lg: "500px",
+          md: "auto",
+          sm: "auto",
+          xs: "auto",
+        },
         flexDirection: "column",
       }}
     >
-      {position === "middle" && description}
+      {position === "middle" && (
+        <Box
+          sx={{
+            display: "flex",
+            alignitems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {description}
+        </Box>
+      )}
       <Box
         sx={{
           display: "flex",
@@ -54,7 +70,28 @@ function BoxCard({ image, description, position, color }: boxCard) {
           }}
         />
       </Box>
-      {position === "top" || position === "bottom" ? description : null}
+      {(position === "top" && (
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {description}
+        </Box>
+      )) ||
+        (position === "bottom" && (
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {description}
+          </Box>
+        ))}
       {/* <Box sx={{ border: "1px solid red" }}>Right</Box> */}
     </Box>
   );
