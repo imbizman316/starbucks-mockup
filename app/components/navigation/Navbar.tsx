@@ -47,7 +47,7 @@ function Navbar() {
         alignItems: "center",
         justifyContent: "space-between",
         // borderBottom: "1px gray solid",
-        boxShadow: 6,
+        boxShadow: 0,
         position: "relative",
         // overflow: "hidden",
         zIndex: 10000,

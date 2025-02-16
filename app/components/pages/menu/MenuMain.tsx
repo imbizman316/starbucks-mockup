@@ -4,9 +4,23 @@ import { useCoffeeStore } from "@/app/store/coffeeStore";
 import { Box, CircularProgress, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import HRDivider from "../../michelaneous/HRDivider";
-import { CoffeeItemCard } from "./CoffeeItemCard";
+import { useCategoriesStore } from "@/app/store/categoriesStore";
+import CategoryItem from "./cart/CategoryItem";
 
 const MenuMain = () => {
+  //This is where I fetch categories.
+  const { categories, fetchCategories } = useCategoriesStore();
+
+  useEffect(() => {
+    async function fetchSequence() {
+      if (categories.length === 0) await fetchCategories();
+    }
+
+    fetchSequence();
+  }, [categories, fetchCategories]);
+  //.......................................//
+
+  //This is where I fetch coffees
   const { coffees, fetchCoffees } = useCoffeeStore();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -21,6 +35,7 @@ const MenuMain = () => {
 
     fetchSequence();
   }, [coffees, fetchCoffees]);
+  //.......................................//
 
   return (
     <Box
@@ -31,23 +46,14 @@ const MenuMain = () => {
       <Typography
         sx={{
           fontWeight: 700,
-          fontSize: "24px",
+          fontSize: "28px",
           color: "#242b3b",
           paddingY: 3,
         }}
       >
         Menu
       </Typography>
-      <Typography
-        sx={{
-          fontWeight: 700,
-          fontSize: "19px",
-          color: "#50524f",
-          paddingBottom: 2,
-        }}
-      >
-        Coffees
-      </Typography>
+
       <HRDivider />
       {isLoading ? (
         <Box
@@ -62,28 +68,11 @@ const MenuMain = () => {
           <CircularProgress />
         </Box>
       ) : (
-        <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: {
-              xl: "1fr 1fr",
-              lg: "1fr 1fr",
-              md: "1fr 1fr",
-              sm: "1fr",
-              xs: "1fr",
-            },
-            gap: 2,
-          }}
-        >
-          {coffees.map((coffee) => (
-            <CoffeeItemCard
-              key={coffee.id}
-              name={coffee.name}
-              image={coffee.image}
-              id={coffee.id}
-            />
+        <>
+          {categories.map((category, index) => (
+            <CategoryItem category={category} key={index} coffees={coffees} />
           ))}
-        </Box>
+        </>
       )}
     </Box>
   );
