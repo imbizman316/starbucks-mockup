@@ -7,6 +7,7 @@ import { Container, Typography } from "@mui/material";
 import Link from "next/link";
 import { menus } from "@/app/data/navbar/data";
 import MenuIcon from "@mui/icons-material/Menu";
+import CreateAccountLoginBar from "./CreateAccountLoginBar";
 
 const MenuItem = ({ link, children }: { link: string; children: string }) => {
   return (
@@ -111,37 +112,7 @@ function Navbar() {
             </Typography>
           </Link>
         </Box> */}
-        <Box sx={{ display: "flex", gap: 1 }}>
-          <Link
-            href="/account/login"
-            className="buttonPadding"
-            style={{
-              backgroundColor: "#FFFFFF",
-              borderRadius: 12,
-              fontSize: 10,
-              color: "#000000b3",
-              fontWeight: "bold",
-              borderColor: "#000000b3",
-              borderBlockStyle: "solid",
-              borderWidth: "0.1rem",
-            }}
-          >
-            Sign in
-          </Link>
-          <Link
-            href="/account/create"
-            className="buttonPadding"
-            style={{
-              backgroundColor: "#000000b3",
-              borderRadius: 12,
-              fontSize: 10,
-              color: "#ffffff",
-              fontWeight: "bold",
-            }}
-          >
-            Join now
-          </Link>
-        </Box>
+        <CreateAccountLoginBar />
       </Container>
       <MenuIcon
         sx={{
@@ -222,37 +193,7 @@ function Navbar() {
                   flexDirection: "column",
                 }}
               >
-                <Box sx={{ display: "flex", gap: 1 }}>
-                  <Link
-                    href="/account/login"
-                    className="buttonPadding"
-                    style={{
-                      backgroundColor: "#FFFFFF",
-                      borderRadius: 12,
-                      fontSize: 10,
-                      color: "#000000b3",
-                      fontWeight: "bold",
-                      borderColor: "#000000b3",
-                      borderBlockStyle: "solid",
-                      borderWidth: "0.1rem",
-                    }}
-                  >
-                    Sign in
-                  </Link>
-                  <Link
-                    href="/account/create"
-                    className="buttonPadding"
-                    style={{
-                      backgroundColor: "#000000b3",
-                      borderRadius: 12,
-                      fontSize: 10,
-                      color: "#ffffff",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    Join now
-                  </Link>
-                </Box>
+                <CreateAccountLoginBar />
                 {/* <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
                   <RoomIcon />
                   <Link href={"/store-locator"}>
