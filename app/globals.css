@@ -40,6 +40,12 @@
   font-style: normal;
 }
 
+.custom-button:hover {
+  opacity: 60%;
+  box-shadow: gray 3px 3px 3px;
+  transition-duration: 0.2s;
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

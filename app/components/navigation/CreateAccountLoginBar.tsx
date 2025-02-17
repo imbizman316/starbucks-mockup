@@ -4,7 +4,19 @@ import { Box } from "@mui/material";
 
 function CreateAccountLoginBar() {
   return (
-    <Box sx={{ display: "flex", gap: 1 }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: {
+          xs: "column",
+          sm: "column",
+          md: "row",
+          lg: "row",
+          xl: "row",
+        },
+        gap: 1,
+      }}
+    >
       <NewCustomButton
         link="/account/login"
         color="#FFFFFF"

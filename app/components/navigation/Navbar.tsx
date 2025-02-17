@@ -142,7 +142,11 @@ function Navbar() {
             right: 0,
             // overflow: "hidden",
           }}
-          onClick={() => setOpenHamburger(false)}
+          onClick={() =>
+            setTimeout(() => {
+              setOpenHamburger(false);
+            }, 200)
+          }
         >
           <Box
             sx={{
