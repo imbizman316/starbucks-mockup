@@ -16,7 +16,8 @@ export const CoffeeItemCard = ({
       sx={{
         display: "flex",
         alignItems: "center",
-        gap: 2,
+        gap: 3,
+        maxWidth: { xs: 450, sm: 450, md: 350, lg: 350, xl: 350 },
       }}
     >
       <Link
@@ -29,9 +30,9 @@ export const CoffeeItemCard = ({
       >
         <Box
           sx={{
-            width: 80,
-            height: 80,
-            minWidth: 80,
+            width: { xs: 80, sm: 80, md: 100, lg: 100, xl: 100 },
+            height: { xs: 80, sm: 80, md: 100, lg: 100, xl: 100 },
+            minWidth: { xs: 80, sm: 80, md: 100, lg: 100, xl: 100 },
             overflow: "hidden",
             borderRadius: "100%",
           }}

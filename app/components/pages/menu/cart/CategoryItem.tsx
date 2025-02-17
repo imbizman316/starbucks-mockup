@@ -2,13 +2,18 @@ import React, { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { Category, Coffee } from "@/app/types/menus/types";
 import { CoffeeItemCard } from "../CoffeeItemCard";
+import HRDivider from "@/app/components/michelaneous/HRDivider";
 
 const CategoryItem = ({
   category,
   coffees,
+  index,
+  sectionRef,
 }: {
   category: Category;
   coffees: Coffee[];
+  index: number;
+  sectionRef: React.RefObject<(HTMLParagraphElement | null)[]>; // Fix type here
 }) => {
   const [categoryCoffees, setCategoryCoffees] = useState<Coffee[] | []>([]);
 
@@ -23,15 +28,22 @@ const CategoryItem = ({
   return (
     <Box>
       <Typography
+        component="p"
         sx={{
           fontWeight: 700,
           fontSize: "24px",
           color: "#50524f",
           paddingBottom: 2,
         }}
+        ref={(el) => {
+          if (el) {
+            sectionRef.current[index] = el;
+          }
+        }}
       >
         {category.category}
       </Typography>
+      <HRDivider />
       <Box
         sx={{
           display: "grid",

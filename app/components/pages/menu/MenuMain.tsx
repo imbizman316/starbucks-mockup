@@ -7,7 +7,11 @@ import HRDivider from "../../michelaneous/HRDivider";
 import { useCategoriesStore } from "@/app/store/categoriesStore";
 import CategoryItem from "./cart/CategoryItem";
 
-const MenuMain = () => {
+const MenuMain = ({
+  sectionRef,
+}: {
+  sectionRef: React.RefObject<(HTMLParagraphElement | null)[]>;
+}) => {
   //This is where I fetch categories.
   const { categories, fetchCategories } = useCategoriesStore();
 
@@ -68,11 +72,23 @@ const MenuMain = () => {
           <CircularProgress />
         </Box>
       ) : (
-        <>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 6,
+          }}
+        >
           {categories.map((category, index) => (
-            <CategoryItem category={category} key={index} coffees={coffees} />
+            <CategoryItem
+              category={category}
+              key={index}
+              coffees={coffees}
+              sectionRef={sectionRef}
+              index={index}
+            />
           ))}
-        </>
+        </Box>
       )}
     </Box>
   );
