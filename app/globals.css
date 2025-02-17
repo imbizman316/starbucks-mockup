@@ -43,7 +43,7 @@
 .custom-button:hover {
   opacity: 60%;
   box-shadow: gray 3px 3px 3px;
-  transition-duration: 0.2s;
+  transition-duration: 0.1s;
 }
 
 /* @media (prefers-color-scheme: dark) {

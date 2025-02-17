@@ -6,7 +6,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import XIcon from "@mui/icons-material/X";
 import { FaSpotify } from "react-icons/fa";
 import { Box } from "@mui/material";
-import Link from "next/link";
+import SocialOneIcon from "./SocialOneIcon";
 
 const iconSize = 25;
 
@@ -60,34 +60,7 @@ function SocialHandleBar() {
       }}
     >
       {socialMediaIcons.map((icon) => (
-        <Box
-          sx={{
-            ":hover": { backgroundColor: "#edebe9" },
-            animationDuration: 10,
-            backgroundColor: "white",
-            borderRadius: "100%",
-            width: 50,
-            height: 50,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          key={icon.id}
-        >
-          <Box
-            sx={{
-              backgroundColor: "#202020",
-              borderRadius: "100%",
-              width: 36,
-              height: 36,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Link href={icon.link}>{icon.icon}</Link>
-          </Box>
-        </Box>
+        <SocialOneIcon icon={icon} key={icon.id} />
       ))}
     </Box>
   );

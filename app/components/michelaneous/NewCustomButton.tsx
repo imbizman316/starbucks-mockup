@@ -28,6 +28,7 @@ function NewCustomButton({
         alignItems: "center",
         justifyContent: "center",
         width: "150px",
+        height: "40px",
       }}
     >
       <Link
@@ -49,6 +50,7 @@ function NewCustomButton({
         className="custom-button"
         onMouseDown={() => setIsMouseDown(true)}
         onMouseUp={() => setIsMouseDown(false)}
+        onMouseLeave={() => setIsMouseDown(false)}
       >
         {text}
       </Link>
