@@ -4,7 +4,6 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import { Container, Typography } from "@mui/material";
-import RoomIcon from "@mui/icons-material/Room";
 import Link from "next/link";
 import { menus } from "@/app/data/navbar/data";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -104,14 +103,14 @@ function Navbar() {
           justifyContent: "end",
         }}
       >
-        <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
+        {/* <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
           <RoomIcon />
           <Link href={"/store-locator"}>
             <Typography sx={{ fontSize: 14, fontWeight: "bold" }}>
               Find a store
             </Typography>
           </Link>
-        </Box>
+        </Box> */}
         <Box sx={{ display: "flex", gap: 1 }}>
           <Link
             href="/account/login"
@@ -254,14 +253,14 @@ function Navbar() {
                     Join now
                   </Link>
                 </Box>
-                <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
+                {/* <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
                   <RoomIcon />
                   <Link href={"/store-locator"}>
                     <Typography sx={{ fontSize: 14, fontWeight: "bold" }}>
                       Find a store
                     </Typography>
                   </Link>
-                </Box>
+                </Box> */}
               </Container>
             </Box>
             <Box

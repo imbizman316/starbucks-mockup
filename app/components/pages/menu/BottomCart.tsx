@@ -22,9 +22,21 @@ const BottomCart = () => {
         zIndex: 300,
       }}
     >
-      <Link href="/menu/cart">
-        <Typography sx={{ color: "white" }}>{coffeesInCart.length}</Typography>
-        <ShoppingCartIcon sx={{ color: "white", fontSize: "45px" }} />
+      <Link href="/menu/cart" style={{ position: "relative" }}>
+        <ShoppingCartIcon sx={{ color: "#02a95b", fontSize: "55px" }} />
+
+        <Typography
+          sx={{
+            color: "white",
+            position: "absolute",
+            top: 6,
+            left: 22,
+            fontWeight: 700,
+            fontSize: 20,
+          }}
+        >
+          {coffeesInCart.length > 0 && coffeesInCart.length}
+        </Typography>
       </Link>
     </Box>
   );
