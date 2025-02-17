@@ -14,12 +14,14 @@ const FavoriteItem = ({
   contentIndex: number;
   handleMovement: (index: number) => void;
 }) => {
-  const optionWidth = 100;
+  const optionWidth = 83;
 
   return (
     <Box
       sx={{
         display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
       {favorites.map((favorite, index) =>
@@ -177,7 +179,7 @@ const GetFavorites = () => {
     >
       <Box
         sx={{
-          minWidth: "517px",
+          width: "auto",
         }}
       >
         <Typography
