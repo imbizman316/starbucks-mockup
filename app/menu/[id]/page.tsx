@@ -1,6 +1,5 @@
 "use client";
 
-import AnimatedHamburger from "@/app/components/michelaneous/AnimatedHamburger";
 import FullTwoDividedCard from "@/app/components/michelaneous/FullTwoDividedCard";
 import CoffeeDescription from "@/app/components/pages/menu/coffee_id/CoffeeDescription";
 import ProductTop from "@/app/components/pages/menu/coffee_id/ProductTop";
@@ -93,7 +92,7 @@ const ProductDetail = () => {
           <FullTwoDividedCard
             color={"#ffffff"}
             left={<SizeOptions />}
-            right={<AnimatedHamburger />}
+            right={<></>}
           />
           <CoffeeDescription description={coffeeDetail?.description} />
         </Box>
