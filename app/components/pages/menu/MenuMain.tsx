@@ -63,13 +63,25 @@ const MenuMain = ({
         <Box
           sx={{
             display: "flex",
-            width: "100%",
+            width: "90vw",
             height: "50vh",
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <CircularProgress />
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+          >
+            <CircularProgress />
+            <Typography variant="h5" fontSize="25px" color="gray">
+              Roasting data...
+            </Typography>
+          </Box>
         </Box>
       ) : (
         <Box

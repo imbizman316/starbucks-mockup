@@ -26,20 +26,9 @@ const SubMenuItem = ({
             maxHeight: menuOpen ? "60px" : "0px",
             paddingBottom: menuOpen ? "15px" : "0px",
             overflow: "hidden",
-            // transition: "max-height padding-bottom 0.2s ease-in-out",
             transitionDuration: "0.4s",
-            // transition: {
-            //   "maxHeight: 0.2s ease-in-out,
-            // },
             color: "rgba(0,0,0,.58)",
             fontSize: "13px",
-            // paddingBottom: "30px",
-            // "&:hover": {
-            //   color: "#695844",
-            //   fontWeight: 550,
-            // },
-            // transition: "text-shadow 0.1s ease",
-            // paddingY: menuOpen && "2px",
             "&:hover": {
               textShadow: "0 0 1px currentColor",
             },
@@ -85,7 +74,6 @@ const MainTitle = ({ data }: { data: MainMenus }) => {
           }}
         />
       </Box>
-      {/* {menuOpen && <SubMenuItem items={data.subMenus} menuOpen={menuOpen} />} */}
 
       <SubMenuItem items={data.subMenus} menuOpen={menuOpen} />
     </Box>

@@ -93,7 +93,7 @@ const ProductDetail = () => {
           <FullTwoDividedCard
             color={"#ffffff"}
             left={<SizeOptions />}
-            right=<SizeOptions />
+            right={<></>}
           />
           <CoffeeDescription description={coffeeDetail?.description} />
         </Box>
