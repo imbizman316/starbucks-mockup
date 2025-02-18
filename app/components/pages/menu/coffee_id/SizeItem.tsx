@@ -12,10 +12,16 @@ function SizeItem({
   size,
   currentSize,
   setCurrentSize,
+  setCurrentIndex,
+  index,
+  sharedSize,
 }: {
   size: Props;
   currentSize: Sizes | string;
   setCurrentSize: Dispatch<SetStateAction<Sizes | string>>;
+  setCurrentIndex: Dispatch<SetStateAction<number>>;
+  index: number;
+  sharedSize: number;
 }) {
   return (
     <Box
@@ -24,22 +30,50 @@ function SizeItem({
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+        zIndex: 10,
       }}
     >
-      <Image
-        src={`/images/menu/sizes/${
-          currentSize === size.size ? `${size.size}_active` : size.size
-        }.svg`}
-        alt="size-grande"
-        width={50}
-        height={50}
-        onClick={() => setCurrentSize(size.size)}
-        style={{
-          cursor: "pointer",
+      <Box
+        sx={{
+          width: sharedSize,
+          height: sharedSize,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
-      />
-      <Typography>{size.size}</Typography>
-      <Typography>{size.quantity} fl oz</Typography>
+      >
+        <Image
+          src={`/images/menu/sizes/${
+            currentSize === size.size ? `${size.size}_active` : size.size
+          }.svg`}
+          alt="size-grande"
+          width={40}
+          height={40}
+          onClick={() => {
+            setCurrentSize(size.size);
+            setCurrentIndex(index);
+          }}
+          style={{
+            cursor: "pointer",
+          }}
+        />
+      </Box>
+      <Typography
+        sx={{
+          color: "#3d3c5c",
+        }}
+        className="font-semibold text-lg"
+      >
+        {size.size}
+      </Typography>
+      <Typography
+        sx={{
+          color: "#3d3c5c",
+          fontSize: "14px",
+        }}
+      >
+        {size.quantity} fl oz
+      </Typography>
     </Box>
   );
 }
