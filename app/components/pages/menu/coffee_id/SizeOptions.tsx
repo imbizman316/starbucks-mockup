@@ -18,7 +18,17 @@ const SizeOptions = () => {
   const sharedSize = 85;
 
   return (
-    <Box>
+    <Box
+      sx={{
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        height: "300px",
+        paddingX: 2,
+      }}
+    >
       <Typography
         sx={{
           fontSize: "24px",

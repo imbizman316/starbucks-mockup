@@ -1,6 +1,7 @@
 "use client";
 
 import FullTwoDividedCard from "@/app/components/michelaneous/FullTwoDividedCard";
+import Addition from "@/app/components/pages/menu/coffee_id/Addition";
 import CoffeeDescription from "@/app/components/pages/menu/coffee_id/CoffeeDescription";
 import ProductTop from "@/app/components/pages/menu/coffee_id/ProductTop";
 import SizeOptions from "@/app/components/pages/menu/coffee_id/SizeOptions";
@@ -92,7 +93,7 @@ const ProductDetail = () => {
           <FullTwoDividedCard
             color={"#ffffff"}
             left={<SizeOptions />}
-            right={<></>}
+            right={<Addition />}
           />
           <CoffeeDescription description={coffeeDetail?.description} />
         </Box>

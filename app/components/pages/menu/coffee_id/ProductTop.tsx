@@ -92,7 +92,7 @@ const ProductTop = ({
               lg: "24px",
               xl: "24px",
             },
-            fontWeight: 400,
+            fontWeight: 600,
             color: "#b2bebc",
             paddingBottom: "32px",
           }}
