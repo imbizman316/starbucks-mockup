@@ -61,6 +61,7 @@ function GettingStarted() {
         alignItems: "center",
         paddingY: 14,
         flexDirection: "column",
+        paddingX: 3,
       }}
     >
       <Box
