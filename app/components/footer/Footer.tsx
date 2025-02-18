@@ -12,7 +12,7 @@ function Footer() {
       <hr className="border-gray-300 border-solid w-[100%]" />
       <SocialHandleBar />
       <PrivacyTerms />
-      <Typography sx={{ paddingTop: 3, fontSize: "14px", color: "#c9b7b3" }}>
+      <Typography sx={{ paddingTop: 3, fontSize: "14px", color: "#756c6d" }}>
         &copy; 2025 Starbucks Coffee Company. All right reserved.
       </Typography>
     </Box>

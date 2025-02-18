@@ -19,14 +19,14 @@ function PrivacyTerms() {
       sx={{
         display: "flex",
         flexDirection: "column",
-        gap: "21px",
+        gap: "15px",
       }}
     >
       {privacyOptions.map((option) => (
         <Typography
           sx={{
             fontSize: "15px",
-            fontWeight: 400,
+            fontWeight: "bold",
             color: "#767676",
             ":hover": {
               textDecoration: "underline",
@@ -34,7 +34,14 @@ function PrivacyTerms() {
           }}
           key={option.id}
         >
-          <Link href={option.link}>{option.title}</Link>
+          <Link
+            style={{
+              color: "#25242c",
+            }}
+            href={option.link}
+          >
+            {option.title}
+          </Link>
         </Typography>
       ))}
     </Box>

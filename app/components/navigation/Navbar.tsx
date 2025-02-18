@@ -8,8 +8,15 @@ import Link from "next/link";
 import { menus } from "@/app/data/navbar/data";
 import MenuIcon from "@mui/icons-material/Menu";
 import CreateAccountLoginBar from "./CreateAccountLoginBar";
+import RightSlideMenu from "./RightSlideMenu";
 
-const MenuItem = ({ link, children }: { link: string; children: string }) => {
+export const MenuItemSlide = ({
+  link,
+  children,
+}: {
+  link: string;
+  children: string;
+}) => {
   return (
     <Link href={link}>
       <Typography
@@ -37,20 +44,30 @@ function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    if (openHamburger) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [openHamburger]);
+
   return (
     <Box
       sx={{
         width: "100%",
-        // paddingX: "2rem",
         paddingY: "1rem",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        // borderBottom: "1px gray solid",
         boxShadow: 0,
         position: "relative",
-        // overflow: "hidden",
         zIndex: 10000,
+        overflow: openHamburger ? "block" : "hidden",
       }}
     >
       <Container
@@ -84,9 +101,9 @@ function Navbar() {
           }}
         >
           {menus.map((menu, index) => (
-            <MenuItem link={menu.link} key={index}>
+            <MenuItemSlide link={menu.link} key={index}>
               {menu.title}
-            </MenuItem>
+            </MenuItemSlide>
           ))}
         </Box>
       </Container>
@@ -104,14 +121,6 @@ function Navbar() {
           justifyContent: "end",
         }}
       >
-        {/* <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
-          <RoomIcon />
-          <Link href={"/store-locator"}>
-            <Typography sx={{ fontSize: 14, fontWeight: "bold" }}>
-              Find a store
-            </Typography>
-          </Link>
-        </Box> */}
         <CreateAccountLoginBar />
       </Container>
       <MenuIcon
@@ -129,98 +138,93 @@ function Navbar() {
         }}
         onClick={() => setOpenHamburger(!openHamburger)}
       />
-      {openHamburger && (
-        <Box
-          sx={{
-            height: "100vh",
-            position: "absolute",
-            // display: "flex",
-            // alignItems: "center",
-            // justifyContent: "center",
-            width: "100vw",
-            top: "115px",
-            right: 0,
-            // overflow: "hidden",
-          }}
-          onClick={() =>
-            setTimeout(() => {
-              setOpenHamburger(false);
-            }, 200)
-          }
-        >
-          <Box
-            sx={{
-              position: "relative",
-            }}
-          >
-            <Box
-              sx={{
-                backgroundColor: "white",
-                height: "100vh",
-                width: "60vw",
-                position: "absolute",
-                zIndex: 400,
-                right: 0,
-              }}
-            >
-              <Container
-                sx={{
-                  // paddingX: "2rem",
-                  paddingY: "1rem",
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                <Link href={"/"}></Link>
-                <Box
-                  sx={{
-                    display: "flex",
-                    gap: 2,
-                    paddingLeft: "2rem",
-                    flexDirection: "column",
-                  }}
-                >
-                  {menus.map((menu, index) => (
-                    <MenuItem link={menu.link} key={index}>
-                      {menu.title}
-                    </MenuItem>
-                  ))}
-                </Box>
-              </Container>
-              <Container
-                sx={{
-                  display: "flex",
-                  // alignItems: "flex-start",
-                  gap: 2,
-                  paddingLeft: 6,
-                  // justifyContent: "flex-start",
-                  flexDirection: "column",
-                }}
-              >
-                <CreateAccountLoginBar />
-                {/* <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
-                  <RoomIcon />
-                  <Link href={"/store-locator"}>
-                    <Typography sx={{ fontSize: 14, fontWeight: "bold" }}>
-                      Find a store
-                    </Typography>
-                  </Link>
-                </Box> */}
-              </Container>
-            </Box>
-            <Box
-              sx={{
-                position: "absolute",
-                height: "100vh",
-                width: "100vw",
-                backgroundColor: "black",
-                opacity: "30%",
-                // left: "-100px",
-              }}
-            />
-          </Box>
-        </Box>
-      )}
+      {
+        // <Box
+        //   sx={{
+        //     height: "100vh",
+        //     position: "absolute",
+        //     // width: openHamburger ? "100%" : "0%",
+        //     right: 0,
+        //     width: "10%",
+        //     transitionDelay: "0.2s",
+        //     transitionDuration: "0.3s",
+        //     top: "115px",
+        //     transform: openHamburger ? "translateX(0)" : "translateX(100%)", // Slide effect
+        //     transition: "transform 0.3s ease-in-out",
+        //   }}
+        //   onClick={() =>
+        //     setTimeout(() => {
+        //       setOpenHamburger(false);
+        //     }, 1000)
+        //   }
+        // >
+        //   <Box
+        //     sx={{
+        //       position: "relative",
+        //     }}
+        //   >
+        //     <Box
+        //       sx={{
+        //         backgroundColor: "white",
+        //         height: "100vh",
+        //         // width: "60vw",
+        //         position: "absolute",
+        //         zIndex: 400,
+        //         right: 0,
+        //       }}
+        //     >
+        //       <Container
+        //         sx={{
+        //           paddingY: "1rem",
+        //           display: "flex",
+        //           alignItems: "center",
+        //         }}
+        //       >
+        //         <Link href={"/"}></Link>
+        //         <Box
+        //           sx={{
+        //             display: "flex",
+        //             gap: 2,
+        //             paddingLeft: "2rem",
+        //             flexDirection: "column",
+        //           }}
+        //         >
+        //           {menus.map((menu, index) => (
+        //             <MenuItem link={menu.link} key={index}>
+        //               {menu.title}
+        //             </MenuItem>
+        //           ))}
+        //         </Box>
+        //       </Container>
+        //       <Container
+        //         sx={{
+        //           display: "flex",
+        //           gap: 2,
+        //           paddingLeft: 6,
+        //           flexDirection: "column",
+        //         }}
+        //       >
+        //         <CreateAccountLoginBar />
+        //       </Container>
+        //     </Box>
+        //     <Box
+        //       sx={{
+        //         position: "absolute",
+        //         height: "100vh",
+        //         width: "100%",
+        //         backgroundColor: "black",
+        //         opacity: openHamburger ? "30%" : "0%",
+        //         // display: openHamburger ? "block" : "none",
+        //         transitionDuration: "2s",
+        //       }}
+        //     />
+        //   </Box>
+        // </Box>
+        <RightSlideMenu
+          openHamburger={openHamburger}
+          setOpenHamburger={setOpenHamburger}
+        />
+      }
     </Box>
   );
 }
