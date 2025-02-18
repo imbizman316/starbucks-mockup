@@ -12,14 +12,11 @@ function SizeItem({
   size,
   currentSize,
   setCurrentSize,
-  setCurrentIndex,
-  index,
   sharedSize,
 }: {
   size: Props;
   currentSize: Sizes | string;
-  setCurrentSize: Dispatch<SetStateAction<Sizes | string>>;
-  setCurrentIndex: Dispatch<SetStateAction<number>>;
+  setCurrentSize: Dispatch<SetStateAction<string>>;
   index: number;
   sharedSize: number;
 }) {
@@ -51,7 +48,6 @@ function SizeItem({
           height={40}
           onClick={() => {
             setCurrentSize(size.size);
-            setCurrentIndex(index);
           }}
           style={{
             cursor: "pointer",

@@ -3,12 +3,17 @@
 import HRDivider from "@/app/components/michelaneous/HRDivider";
 import { Sizes, sizes } from "@/app/data/pages/menu/data";
 import { Box, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SizeItem from "./SizeItem";
 
 const SizeOptions = () => {
   const [currentSize, setCurrentSize] = useState<Sizes | string>(Sizes.grande);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  useEffect(() => {
+    const foundIndex = sizes.findIndex((each) => each.size === currentSize);
+    setCurrentIndex(foundIndex);
+  }, [currentSize]);
 
   const sharedSize = 85;
 
@@ -30,7 +35,6 @@ const SizeOptions = () => {
             key={index}
             currentSize={currentSize}
             setCurrentSize={setCurrentSize}
-            setCurrentIndex={setCurrentIndex}
             index={index}
             sharedSize={sharedSize}
           />
