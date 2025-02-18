@@ -23,9 +23,11 @@ const SubMenuItem = ({
       {items.map((item) => (
         <Typography
           sx={{
-            maxHeight: menuOpen ? "50px" : "0px",
+            maxHeight: menuOpen ? "60px" : "0px",
+            paddingBottom: menuOpen ? "15px" : "0px",
             overflow: "hidden",
-            transition: "max-height 0.2s ease-in-out",
+            // transition: "max-height padding-bottom 0.2s ease-in-out",
+            transitionDuration: "0.4s",
             // transition: {
             //   "maxHeight: 0.2s ease-in-out,
             // },
