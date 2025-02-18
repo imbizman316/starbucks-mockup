@@ -1,5 +1,6 @@
 "use client";
 
+import AnimatedHamburger from "@/app/components/michelaneous/AnimatedHamburger";
 import FullTwoDividedCard from "@/app/components/michelaneous/FullTwoDividedCard";
 import CoffeeDescription from "@/app/components/pages/menu/coffee_id/CoffeeDescription";
 import ProductTop from "@/app/components/pages/menu/coffee_id/ProductTop";
@@ -60,7 +61,6 @@ const ProductDetail = () => {
 
     fetchSequence();
   }, [coffees, fetchCoffees, id]);
-  // }, [coffees, fetchCoffees, id]);
 
   return (
     <Box
@@ -93,7 +93,7 @@ const ProductDetail = () => {
           <FullTwoDividedCard
             color={"#ffffff"}
             left={<SizeOptions />}
-            right={<></>}
+            right={<AnimatedHamburger />}
           />
           <CoffeeDescription description={coffeeDetail?.description} />
         </Box>

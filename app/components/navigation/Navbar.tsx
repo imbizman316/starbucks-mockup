@@ -9,6 +9,7 @@ import { menus } from "@/app/data/navbar/data";
 import MenuIcon from "@mui/icons-material/Menu";
 import CreateAccountLoginBar from "./CreateAccountLoginBar";
 import RightSlideMenu from "./RightSlideMenu";
+import AnimatedHamburger from "../michelaneous/AnimatedHamburger";
 
 export const MenuItemSlide = ({
   link,
@@ -123,7 +124,11 @@ function Navbar() {
       >
         <CreateAccountLoginBar />
       </Container>
-      <MenuIcon
+      <AnimatedHamburger
+        customState={openHamburger}
+        customSetState={setOpenHamburger}
+      />
+      {/* <MenuIcon
         sx={{
           display: {
             xs: "block",
@@ -137,7 +142,7 @@ function Navbar() {
           marginRight: "16px",
         }}
         onClick={() => setOpenHamburger(!openHamburger)}
-      />
+      /> */}
       {
         // <Box
         //   sx={{
