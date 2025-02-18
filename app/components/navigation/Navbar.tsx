@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 import { Container, Typography } from "@mui/material";
 import Link from "next/link";
 import { menus } from "@/app/data/navbar/data";
-import MenuIcon from "@mui/icons-material/Menu";
+// import MenuIcon from "@mui/icons-material/Menu";
 import CreateAccountLoginBar from "./CreateAccountLoginBar";
 import RightSlideMenu from "./RightSlideMenu";
 import AnimatedHamburger from "../michelaneous/AnimatedHamburger";
