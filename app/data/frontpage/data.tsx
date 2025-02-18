@@ -1,8 +1,12 @@
 import { boxCard } from "@/app/types/frontpage/type";
 import { Box, Button, Typography } from "@mui/material";
 
-type color = "#f4f3ef" | "#016243";
+type color = string;
 type fontColor = "#453c1f" | "#f6f9e8" | "";
+enum Colors {
+  white = "#f4f3ef",
+  green = "#016243",
+}
 
 const getFontColor = (color: color): fontColor => {
   let fontColor: fontColor = "";
@@ -26,21 +30,22 @@ const CardTextPart = ({
   title,
   content,
   button,
+  color,
 }: {
   title: string;
   content: string;
   button: string;
+  color: string;
 }) => {
   return (
     <Box
       sx={{
         flex: 1,
-        color: getFontColor("#016243"),
+        color: getFontColor(color),
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
         display: "flex",
-        // paddingX: 20,
         gap: 3,
         maxWidth: "666px",
         paddingX: 5,
@@ -66,9 +71,9 @@ const CardTextPart = ({
       <Button
         className="buttonPadding"
         sx={{
-          color: "#ffffed",
+          color: getFontColor(color),
           fontSize: "14px",
-          borderColor: "#ffffed",
+          borderColor: getFontColor(color),
           borderWidth: 1,
           borderStyle: "solid",
           borderRadius: "50px",
@@ -90,6 +95,7 @@ export const frontPageData: boxCard[] = [
         title="Crafted with love"
         content="Embrace the season with a Chocolate Hazelnut Cookie Cold Brew and Chocolate-Covered Strawberry Crème Frappuccino® blended beverage."
         button="learn more"
+        color={Colors.white}
       />
     ),
     color: "#f4f3ef",
@@ -102,6 +108,7 @@ export const frontPageData: boxCard[] = [
         title="More reasons to stay awhile"
         content="Mugs, glasses and the condiment bar are back-and all for-here orders include freshly brewed refills on coffee and tea."
         button="learn more"
+        color={Colors.green}
       />
     ),
     color: "#016243",
@@ -114,6 +121,7 @@ export const frontPageData: boxCard[] = [
         title="A big Sunday calls for Starbucks Monday"
         content="On Monday 2.10.25, we’re treating Starbucks® Rewards members to a free tall hot or iced coffee.* Going big for the big game? We’ve got your back."
         button="join now"
+        color={Colors.green}
       />
     ),
     color: "#016243",
