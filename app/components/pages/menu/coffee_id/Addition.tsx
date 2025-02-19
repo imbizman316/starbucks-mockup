@@ -1,8 +1,22 @@
 import HRDivider from "@/app/components/michelaneous/HRDivider";
-import { Box, MenuItem, TextField, Typography } from "@mui/material";
-import React from "react";
+import { Toppings } from "@/app/types/menus/types";
+import { Box, MenuItem, Select, Typography } from "@mui/material";
+import React, { useState } from "react";
 
 function Addition() {
+  const [toppings, setToppings] = useState<Toppings>({
+    milk: 2,
+    sugar: 0,
+    cream: 0,
+  });
+
+  function handleChange(e) {
+    console.log(e.target.name);
+    console.log(e.target.value);
+
+    setToppings({ ...toppings, [e.target.name]: Number(e.target.value) });
+  }
+
   return (
     <Box
       sx={{
@@ -31,42 +45,49 @@ function Addition() {
           gap: 3,
         }}
       >
-        <TextField
+        <Select
           label={`Milk (small cup)`}
-          select
           variant="outlined"
           sx={{ width: 300 }}
+          name="milk"
+          onChange={handleChange}
+          value={toppings.milk}
         >
-          <MenuItem>1</MenuItem>
-          <MenuItem>2</MenuItem>
-          <MenuItem>3</MenuItem>
-          <MenuItem>4</MenuItem>
-          <MenuItem>5</MenuItem>
-        </TextField>
-        <TextField
+          <MenuItem value={0}>0</MenuItem>
+          <MenuItem value={1}>1</MenuItem>
+          <MenuItem value={2}>2</MenuItem>
+          <MenuItem value={3}>3</MenuItem>
+          <MenuItem value={4}>4</MenuItem>
+          <MenuItem value={5}>5</MenuItem>
+        </Select>
+        {/* <TextField
           label="Sugar (tea spoon)"
           select
           variant="outlined"
           sx={{ width: 300 }}
+          id="sugar"
         >
-          <MenuItem>1</MenuItem>
-          <MenuItem>2</MenuItem>
-          <MenuItem>3</MenuItem>
-          <MenuItem>4</MenuItem>
-          <MenuItem>5</MenuItem>
+          <MenuItem value={0}>0</MenuItem>
+          <MenuItem value={1}>1</MenuItem>
+          <MenuItem value={2}>2</MenuItem>
+          <MenuItem value={3}>3</MenuItem>
+          <MenuItem value={4}>4</MenuItem>
+          <MenuItem value={5}>5</MenuItem>
         </TextField>
         <TextField
           label="Cream (small cup)"
           select
           variant="outlined"
           sx={{ width: 300 }}
+          id="cream"
         >
-          <MenuItem>1</MenuItem>
-          <MenuItem>2</MenuItem>
-          <MenuItem>3</MenuItem>
-          <MenuItem>4</MenuItem>
-          <MenuItem>5</MenuItem>
-        </TextField>
+          <MenuItem value={0}>0</MenuItem>
+          <MenuItem value={1}>1</MenuItem>
+          <MenuItem value={2}>2</MenuItem>
+          <MenuItem value={3}>3</MenuItem>
+          <MenuItem value={4}>4</MenuItem>
+          <MenuItem value={5}>5</MenuItem>
+        </TextField> */}
       </Box>
     </Box>
   );
