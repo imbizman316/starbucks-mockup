@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { FieldValues, useForm } from "react-hook-form";
 import {
@@ -16,7 +16,7 @@ import {
 const supabase = createClientComponentClient();
 
 const LoginPage = () => {
-  const router = useRouter();
+  // const router = useRouter();
   const [errorMessage, setErrorMessage] = useState("");
   const {
     register,
@@ -39,7 +39,7 @@ const LoginPage = () => {
       return;
     }
 
-    router.push("/");
+    window.location.reload();
   };
 
   return (

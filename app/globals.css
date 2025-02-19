@@ -13,29 +13,28 @@
 
 @font-face {
   font-family: "Figtree";
-  src: url("/public/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+  src: url("/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Figtree";
-  src: url("/public/fonts/Figtree-Italic-VariableFont_wght.ttf")
-    format("truetype");
+  src: url("/fonts/Figtree-Italic-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Figtree";
-  src: url("/public/fonts/Figtree-ExtraBold.ttf") format("truetype");
+  src: url("/fonts/Figtree-ExtraBold.ttf") format("truetype");
   font-weight: bolder;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Figtree";
-  src: url("/public/fonts/Figtree-Medium.ttf") format("truetype");
+  src: url("/fonts/Figtree-Medium.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }

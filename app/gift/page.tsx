@@ -80,6 +80,7 @@ const GiftPage = () => {
             alt="illustration"
             style={{
               borderRadius: "10px",
+              height: "auto",
             }}
           />
           <Box

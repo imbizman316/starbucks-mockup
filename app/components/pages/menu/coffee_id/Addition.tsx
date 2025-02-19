@@ -2,6 +2,8 @@ import HRDivider from "@/app/components/michelaneous/HRDivider";
 import { Toppings } from "@/app/types/menus/types";
 import {
   Box,
+  FormControl,
+  InputLabel,
   MenuItem,
   Select,
   SelectChangeEvent,
@@ -11,7 +13,7 @@ import React, { useState } from "react";
 
 function Addition() {
   const [toppings, setToppings] = useState<Toppings>({
-    milk: 2,
+    milk: 0,
     sugar: 0,
     cream: 0,
   });
@@ -51,49 +53,64 @@ function Addition() {
           gap: 3,
         }}
       >
-        <Select
-          label={`Milk (small cup)`}
-          variant="outlined"
-          sx={{ width: 300 }}
-          name="milk"
-          onChange={handleChange}
-          value={String(toppings.milk)}
-        >
-          <MenuItem value={0}>0</MenuItem>
-          <MenuItem value={1}>1</MenuItem>
-          <MenuItem value={2}>2</MenuItem>
-          <MenuItem value={3}>3</MenuItem>
-          <MenuItem value={4}>4</MenuItem>
-          <MenuItem value={5}>5</MenuItem>
-        </Select>
-        {/* <TextField
-          label="Sugar (tea spoon)"
-          select
-          variant="outlined"
-          sx={{ width: 300 }}
-          id="sugar"
-        >
-          <MenuItem value={0}>0</MenuItem>
-          <MenuItem value={1}>1</MenuItem>
-          <MenuItem value={2}>2</MenuItem>
-          <MenuItem value={3}>3</MenuItem>
-          <MenuItem value={4}>4</MenuItem>
-          <MenuItem value={5}>5</MenuItem>
-        </TextField>
-        <TextField
-          label="Cream (small cup)"
-          select
-          variant="outlined"
-          sx={{ width: 300 }}
-          id="cream"
-        >
-          <MenuItem value={0}>0</MenuItem>
-          <MenuItem value={1}>1</MenuItem>
-          <MenuItem value={2}>2</MenuItem>
-          <MenuItem value={3}>3</MenuItem>
-          <MenuItem value={4}>4</MenuItem>
-          <MenuItem value={5}>5</MenuItem>
-        </TextField> */}
+        <FormControl>
+          <InputLabel variant="filled">Milk (small cup)</InputLabel>
+          <Select
+            variant="outlined"
+            sx={{ width: 300 }}
+            name="milk"
+            onChange={handleChange}
+            value={String(toppings.milk)}
+          >
+            <MenuItem value={0}>0</MenuItem>
+            <MenuItem value={1}>1</MenuItem>
+            <MenuItem value={2}>2</MenuItem>
+            <MenuItem value={3}>3</MenuItem>
+            <MenuItem value={4}>4</MenuItem>
+            <MenuItem value={5}>5</MenuItem>
+          </Select>
+        </FormControl>
+        <FormControl>
+          <InputLabel variant="filled">Sugar (tea spoon)</InputLabel>
+          <Select
+            variant="outlined"
+            sx={{ width: 300 }}
+            name="sugar"
+            onChange={handleChange}
+            value={String(toppings.sugar)}
+          >
+            <MenuItem value={0}>0</MenuItem>
+            <MenuItem value={1}>1</MenuItem>
+            <MenuItem value={2}>2</MenuItem>
+            <MenuItem value={3}>3</MenuItem>
+            <MenuItem value={4}>4</MenuItem>
+            <MenuItem value={5}>5</MenuItem>
+          </Select>
+        </FormControl>
+        <FormControl>
+          <InputLabel
+            variant="filled"
+            sx={{
+              height: 60,
+            }}
+          >
+            Cream (small cup)
+          </InputLabel>
+          <Select
+            variant="outlined"
+            sx={{ width: 300 }}
+            name="cream"
+            onChange={handleChange}
+            value={String(toppings.cream)}
+          >
+            <MenuItem value={0}>0</MenuItem>
+            <MenuItem value={1}>1</MenuItem>
+            <MenuItem value={2}>2</MenuItem>
+            <MenuItem value={3}>3</MenuItem>
+            <MenuItem value={4}>4</MenuItem>
+            <MenuItem value={5}>5</MenuItem>
+          </Select>
+        </FormControl>
       </Box>
     </Box>
   );

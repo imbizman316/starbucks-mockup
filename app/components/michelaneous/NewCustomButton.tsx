@@ -1,23 +1,22 @@
 "use client";
 
 import { Box } from "@mui/material";
-import Link from "next/link";
 import React, { useState } from "react";
 
 interface Props {
   color: string;
-  link: string;
   fontsize?: number;
   fontcolor: string;
   text: string;
+  customFunction: () => void;
 }
 
 function NewCustomButton({
   color,
-  link,
   fontsize = 15,
   fontcolor,
   text,
+  customFunction,
 }: Props) {
   const [isMouseDown, setIsMouseDown] = useState(false);
 
@@ -30,8 +29,9 @@ function NewCustomButton({
         width: "150px",
         height: "40px",
       }}
+      onClick={customFunction}
     >
-      <Link
+      <div
         style={{
           backgroundColor: color,
           color: fontcolor,
@@ -46,14 +46,14 @@ function NewCustomButton({
           justifyContent: "center",
           alignItems: "center",
         }}
-        href={link}
+        // href={link}
         className="custom-button"
         onMouseDown={() => setIsMouseDown(true)}
         onMouseUp={() => setIsMouseDown(false)}
         onMouseLeave={() => setIsMouseDown(false)}
       >
         {text}
-      </Link>
+      </div>
     </Box>
   );
 }
