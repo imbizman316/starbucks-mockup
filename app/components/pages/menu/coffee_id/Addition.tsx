@@ -1,6 +1,12 @@
 import HRDivider from "@/app/components/michelaneous/HRDivider";
 import { Toppings } from "@/app/types/menus/types";
-import { Box, MenuItem, Select, Typography } from "@mui/material";
+import {
+  Box,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+  Typography,
+} from "@mui/material";
 import React, { useState } from "react";
 
 function Addition() {
@@ -10,7 +16,7 @@ function Addition() {
     cream: 0,
   });
 
-  function handleChange(e) {
+  function handleChange(e: SelectChangeEvent) {
     console.log(e.target.name);
     console.log(e.target.value);
 
@@ -51,7 +57,7 @@ function Addition() {
           sx={{ width: 300 }}
           name="milk"
           onChange={handleChange}
-          value={toppings.milk}
+          value={String(toppings.milk)}
         >
           <MenuItem value={0}>0</MenuItem>
           <MenuItem value={1}>1</MenuItem>
