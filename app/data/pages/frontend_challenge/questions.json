@@ -1,0 +1,900 @@
+{
+  "welcome": [
+    {
+      "question": "",
+      "title1": "Welcome to the",
+      "title2": "Frontend Quiz!",
+      "subtitle": "Pick a subject to get started",
+      "options": ["geography", "history"],
+      "category": "",
+      "buttonText": "Select difficulty"
+    }
+  ],
+  "difficulty": [
+    {
+      "question": "",
+      "title1": "How good are you?",
+      "title2": "Select Difficulty",
+      "subtitle": "",
+      "options": ["easy", "medium", "hard", "genius"],
+      "category": "",
+      "buttonText": "Start game"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the largest planet in our solar system?",
+      "options": ["Mars", "Jupiter", "Saturn", "Earth"],
+      "correctAnswer": "Jupiter",
+      "explanation": "Jupiter is the fifth planet from the Sun and the largest in the Solar System.",
+      "difficulty": "medium",
+      "category": "science",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 2,
+      "question": "What is the capital city of Japan?",
+      "options": ["Kyoto", "Osaka", "Tokyo", "Hiroshima"],
+      "correctAnswer": "Tokyo",
+      "explanation": "Tokyo is the capital city of Japan and one of the most populous cities in the world.",
+      "difficulty": "easy",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 3,
+      "question": "Who directed the movie 'Inception'?",
+      "options": [
+        "Steven Spielberg",
+        "Christopher Nolan",
+        "James Cameron",
+        "Quentin Tarantino"
+      ],
+      "correctAnswer": "Christopher Nolan",
+      "explanation": "Christopher Nolan directed the mind-bending science fiction film 'Inception' released in 2010.",
+      "difficulty": "medium",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 4,
+      "question": "Which country is known as the Land of the Rising Sun?",
+      "options": ["China", "South Korea", "Japan", "India"],
+      "correctAnswer": "Japan",
+      "explanation": "Japan is often referred to as the Land of the Rising Sun due to its eastern location relative to the Asian continent.",
+      "difficulty": "easy",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 5,
+      "question": "Who invented the lightbulb?",
+      "options": [
+        "Nikola Tesla",
+        "Thomas Edison",
+        "Alexander Graham Bell",
+        "Michael Faraday"
+      ],
+      "correctAnswer": "Thomas Edison",
+      "explanation": "Thomas Edison is credited with inventing the practical electric lightbulb in 1879.",
+      "difficulty": "medium",
+      "category": "science",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 6,
+      "question": "What is the longest river in the world?",
+      "options": [
+        "Amazon River",
+        "Nile River",
+        "Yangtze River",
+        "Mississippi River"
+      ],
+      "correctAnswer": "Nile River",
+      "explanation": "The Nile River is considered the longest river in the world, stretching over 6,650 kilometers.",
+      "difficulty": "hard",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 7,
+      "question": "Who is the author of 'Harry Potter' series?",
+      "options": [
+        "J.R.R. Tolkien",
+        "George R.R. Martin",
+        "J.K. Rowling",
+        "Suzanne Collins"
+      ],
+      "correctAnswer": "J.K. Rowling",
+      "explanation": "J.K. Rowling is the author of the 'Harry Potter' series, one of the best-selling book series of all time.",
+      "difficulty": "easy",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 8,
+      "question": "What element does 'O' represent on the periodic table?",
+      "options": ["Oxygen", "Osmium", "Oganesson", "Oxidane"],
+      "correctAnswer": "Oxygen",
+      "explanation": "'O' represents the element Oxygen on the periodic table.",
+      "difficulty": "easy",
+      "category": "science",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 9,
+      "question": "What is the smallest country in the world by land area?",
+      "options": ["Monaco", "San Marino", "Vatican City", "Liechtenstein"],
+      "correctAnswer": "Vatican City",
+      "explanation": "Vatican City is the smallest country in the world by land area, covering only 44 hectares.",
+      "difficulty": "medium",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 10,
+      "question": "Which actor played the character 'Iron Man' in the Marvel Cinematic Universe?",
+      "options": [
+        "Chris Hemsworth",
+        "Mark Ruffalo",
+        "Robert Downey Jr.",
+        "Chris Evans"
+      ],
+      "correctAnswer": "Robert Downey Jr.",
+      "explanation": "Robert Downey Jr. played the character 'Iron Man' in the Marvel Cinematic Universe.",
+      "difficulty": "easy",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 11,
+      "question": "What is the tallest mountain in the world?",
+      "options": ["Mount Kilimanjaro", "Mount Everest", "K2", "Mount Elbrus"],
+      "correctAnswer": "Mount Everest",
+      "explanation": "Mount Everest is the tallest mountain in the world, standing at 8,848 meters (29,029 feet) above sea level.",
+      "difficulty": "medium",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 12,
+      "question": "Which element has the highest melting point?",
+      "options": ["Iron", "Tungsten", "Gold", "Platinum"],
+      "correctAnswer": "Tungsten",
+      "explanation": "Tungsten has the highest melting point of all elements, at 3,422 degrees Celsius (6,192 degrees Fahrenheit).",
+      "difficulty": "hard",
+      "category": "science",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 13,
+      "question": "What was the highest-grossing film of all time (as of 2025)?",
+      "options": [
+        "Titanic",
+        "Avatar",
+        "Avengers: Endgame",
+        "Star Wars: The Force Awakens"
+      ],
+      "correctAnswer": "Avatar",
+      "explanation": "As of 2025, 'Avatar' is the highest-grossing film of all time, directed by James Cameron and released in 2009.",
+      "difficulty": "medium",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 14,
+      "question": "Who was the first President of the United States?",
+      "options": [
+        "Thomas Jefferson",
+        "Abraham Lincoln",
+        "George Washington",
+        "John Adams"
+      ],
+      "correctAnswer": "George Washington",
+      "explanation": "George Washington was the first President of the United States, serving from 1789 to 1797.",
+      "difficulty": "easy",
+      "category": "history",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 15,
+      "question": "What ancient civilization built the Pyramids of Giza?",
+      "options": ["Roman", "Mayan", "Egyptian", "Greek"],
+      "correctAnswer": "Egyptian",
+      "explanation": "The Pyramids of Giza were built by the ancient Egyptian civilization as monumental tombs for their pharaohs.",
+      "difficulty": "medium",
+      "category": "history",
+      "buttonText": "Submit answer"
+    },
+
+    {
+      "id": 16,
+      "question": "Which scientist developed the theory of relativity?",
+      "options": [
+        "Isaac Newton",
+        "Albert Einstein",
+        "Stephen Hawking",
+        "Niels Bohr"
+      ],
+      "correctAnswer": "Albert Einstein",
+      "explanation": "Albert Einstein developed the theory of relativity, which revolutionized our understanding of space, time, gravity, and the universe.",
+      "difficulty": "medium",
+      "category": "science",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 17,
+      "question": "What is the largest ocean on Earth?",
+      "options": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean",
+        "Pacific Ocean"
+      ],
+      "correctAnswer": "Pacific Ocean",
+      "explanation": "The Pacific Ocean is the largest and deepest of Earth's oceanic divisions.",
+      "difficulty": "easy",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 18,
+      "question": "Who wrote the play 'Hamlet'?",
+      "options": [
+        "William Shakespeare",
+        "Oscar Wilde",
+        "George Bernard Shaw",
+        "Arthur Miller"
+      ],
+      "correctAnswer": "William Shakespeare",
+      "explanation": "William Shakespeare wrote the tragedy 'Hamlet', one of the most influential works in English literature.",
+      "difficulty": "medium",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 19,
+      "question": "In which year did World War II end?",
+      "options": ["1943", "1945", "1947", "1949"],
+      "correctAnswer": "1945",
+      "explanation": "World War II officially ended in 1945 with the surrender of Nazi Germany and Imperial Japan.",
+      "difficulty": "easy",
+      "category": "history",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 20,
+      "question": "What is the chemical symbol for gold?",
+      "options": ["Au", "Ag", "Fe", "Cu"],
+      "correctAnswer": "Au",
+      "explanation": "The chemical symbol for gold is Au, derived from the Latin word 'aurum'.",
+      "difficulty": "easy",
+      "category": "science",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 21,
+      "question": "Which desert is the largest in the world?",
+      "options": [
+        "Sahara Desert",
+        "Arabian Desert",
+        "Gobi Desert",
+        "Antarctic Polar Desert"
+      ],
+      "correctAnswer": "Antarctic Polar Desert",
+      "explanation": "The Antarctic Polar Desert is the largest desert in the world, covering the continent of Antarctica.",
+      "difficulty": "hard",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 22,
+      "question": "Who painted the 'Mona Lisa'?",
+      "options": [
+        "Vincent van Gogh",
+        "Leonardo da Vinci",
+        "Pablo Picasso",
+        "Michelangelo"
+      ],
+      "correctAnswer": "Leonardo da Vinci",
+      "explanation": "Leonardo da Vinci painted the 'Mona Lisa', one of the most famous artworks in the world.",
+      "difficulty": "easy",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 23,
+      "question": "What year did the Titanic sink?",
+      "options": ["1910", "1912", "1914", "1916"],
+      "correctAnswer": "1912",
+      "explanation": "The RMS Titanic sank on April 15, 1912, after striking an iceberg.",
+      "difficulty": "medium",
+      "category": "history",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 24,
+      "question": "What is the process by which plants make their own food?",
+      "options": ["Respiration", "Photosynthesis", "Digestion", "Fermentation"],
+      "correctAnswer": "Photosynthesis",
+      "explanation": "Photosynthesis is the process by which plants convert light energy into chemical energy in the form of sugars.",
+      "difficulty": "easy",
+      "category": "science",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 25,
+      "question": "Which mountain range separates Europe from Asia?",
+      "options": ["Alps", "Himalayas", "Andes", "Ural Mountains"],
+      "correctAnswer": "Ural Mountains",
+      "explanation": "The Ural Mountains form the traditional boundary between Europe and Asia.",
+      "difficulty": "medium",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 26,
+      "question": "Who directed the film 'The Godfather'?",
+      "options": [
+        "Francis Ford Coppola",
+        "Martin Scorsese",
+        "Steven Spielberg",
+        "Alfred Hitchcock"
+      ],
+      "correctAnswer": "Francis Ford Coppola",
+      "explanation": "Francis Ford Coppola directed 'The Godfather', a classic film released in 1972.",
+      "difficulty": "medium",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 27,
+      "question": "What was the name of the ship that Charles Darwin sailed on?",
+      "options": ["HMS Victory", "HMS Beagle", "HMS Endeavour", "HMS Bounty"],
+      "correctAnswer": "HMS Beagle",
+      "explanation": "Charles Darwin sailed on the HMS Beagle during his famous voyage that contributed to his theory of evolution.",
+      "difficulty": "medium",
+      "category": "history",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 28,
+      "question": "What is the speed of light in a vacuum?",
+      "options": [
+        "300,000 km/s",
+        "250,000 km/s",
+        "350,000 km/s",
+        "400,000 km/s"
+      ],
+      "correctAnswer": "300,000 km/s",
+      "explanation": "The speed of light in a vacuum is approximately 299,792 kilometers per second, often rounded to 300,000 km/s.",
+      "difficulty": "medium",
+      "category": "science",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 29,
+      "question": "Which continent is known as the 'Dark Continent'?",
+      "options": ["Asia", "Africa", "South America", "Australia"],
+      "correctAnswer": "Africa",
+      "explanation": "Africa was historically referred to as the 'Dark Continent' due to its largely unexplored interior by Europeans.",
+      "difficulty": "medium",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 30,
+      "question": "Who composed the 'Moonlight Sonata'?",
+      "options": [
+        "Wolfgang Amadeus Mozart",
+        "Ludwig van Beethoven",
+        "Johann Sebastian Bach",
+        "Frederic Chopin"
+      ],
+      "correctAnswer": "Ludwig van Beethoven",
+      "explanation": "Ludwig van Beethoven composed the 'Moonlight Sonata', a famous piano sonata.",
+      "difficulty": "medium",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 31,
+      "question": "What year was the Declaration of Independence signed?",
+      "options": ["1774", "1776", "1778", "1780"],
+      "correctAnswer": "1776",
+      "explanation": "The Declaration of Independence was signed on July 4, 1776, in Philadelphia.",
+      "difficulty": "easy",
+      "category": "history",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 33,
+      "question": "What is the name of the highest mountain in Africa?",
+      "options": [
+        "Mount Kilimanjaro",
+        "Mount Kenya",
+        "Mount Stanley",
+        "Mount Meru"
+      ],
+      "correctAnswer": "Mount Kilimanjaro",
+      "explanation": "Mount Kilimanjaro is the highest mountain in Africa, located in Tanzania.",
+      "difficulty": "medium",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 34,
+      "question": "Who painted the ceiling of the Sistine Chapel?",
+      "options": ["Leonardo da Vinci", "Michelangelo", "Raphael", "Donatello"],
+      "correctAnswer": "Michelangelo",
+      "explanation": "Michelangelo painted the ceiling of the Sistine Chapel, a masterpiece of Renaissance art.",
+      "difficulty": "medium",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 35,
+      "question": "In what year did the American Civil War begin?",
+      "options": ["1861", "1863", "1865", "1867"],
+      "correctAnswer": "1861",
+      "explanation": "The American Civil War began in 1861 and lasted until 1865.",
+      "difficulty": "easy",
+      "category": "history",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 36,
+      "question": "What is the smallest planet in our solar system?",
+      "options": ["Mercury", "Venus", "Mars", "Pluto"],
+      "correctAnswer": "Mercury",
+      "explanation": "Mercury is the smallest planet in our solar system and the closest to the Sun.",
+      "difficulty": "easy",
+      "category": "science",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 37,
+      "question": "Which country is both an island and a continent?",
+      "options": ["Madagascar", "Greenland", "Iceland", "Australia"],
+      "correctAnswer": "Australia",
+      "explanation": "Australia is unique in being both the world's smallest continent and its largest island.",
+      "difficulty": "easy",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 38,
+      "question": "Who wrote the novel 'Pride and Prejudice'?",
+      "options": [
+        "Jane Austen",
+        "Charlotte Brontë",
+        "Emily Brontë",
+        "Virginia Woolf"
+      ],
+      "correctAnswer": "Jane Austen",
+      "explanation": "Jane Austen wrote the classic romantic novel 'Pride and Prejudice'.",
+      "difficulty": "medium",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 39,
+      "question": "What event marked the beginning of World War I?",
+      "options": [
+        "The sinking of the Lusitania",
+        "The assassination of Archduke Franz Ferdinand",
+        "The bombing of Pearl Harbor",
+        "The invasion of Poland"
+      ],
+      "correctAnswer": "The assassination of Archduke Franz Ferdinand",
+      "explanation": "The assassination of Archduke Franz Ferdinand of Austria-Hungary in 1914 triggered the start of World War I.",
+      "difficulty": "medium",
+      "category": "history",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 40,
+      "question": "What is the name of the largest moon in our solar system?",
+      "options": ["Ganymede", "Titan", "Callisto", "Europa"],
+      "correctAnswer": "Ganymede",
+      "explanation": "Ganymede, a moon of Jupiter, is the largest moon in our solar system.",
+      "difficulty": "hard",
+      "category": "science",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 41,
+      "question": "Which country is home to the Great Barrier Reef?",
+      "options": ["Indonesia", "Philippines", "Australia", "Fiji"],
+      "correctAnswer": "Australia",
+      "explanation": "The Great Barrier Reef, the world's largest coral reef system, is located off the coast of Queensland, Australia.",
+      "difficulty": "easy",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 42,
+      "question": "Who wrote the famous play 'Romeo and Juliet'?",
+      "options": [
+        "William Shakespeare",
+        "Christopher Marlowe",
+        "John Webster",
+        "Ben Jonson"
+      ],
+      "correctAnswer": "William Shakespeare",
+      "explanation": "William Shakespeare wrote the tragic love story 'Romeo and Juliet'.",
+      "difficulty": "easy",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 43,
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "options": [
+        "Amelia Earhart",
+        "Bessie Coleman",
+        "Ruth Elder",
+        "Jacqueline Cochran"
+      ],
+      "correctAnswer": "Amelia Earhart",
+      "explanation": "Amelia Earhart was the first woman to fly solo across the Atlantic Ocean in 1932.",
+      "difficulty": "medium",
+      "category": "history",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 44,
+      "question": "What is the name of the closest star to Earth?",
+      "options": [
+        "Sirius",
+        "Proxima Centauri",
+        "Alpha Centauri A",
+        "Betelgeuse"
+      ],
+      "correctAnswer": "Proxima Centauri",
+      "explanation": "Proxima Centauri is the closest star to our Sun, located about 4.24 light-years away.",
+      "difficulty": "medium",
+      "category": "science",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 46,
+      "question": "Which desert is the driest non-polar desert in the world?",
+      "options": [
+        "Sahara Desert",
+        "Atacama Desert",
+        "Gobi Desert",
+        "Arabian Desert"
+      ],
+      "correctAnswer": "Atacama Desert",
+      "explanation": "The Atacama Desert in South America is considered the driest non-polar desert on Earth.",
+      "difficulty": "hard",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 47,
+      "question": "Who directed the film 'Citizen Kane'?",
+      "options": [
+        "Alfred Hitchcock",
+        "Orson Welles",
+        "Billy Wilder",
+        "John Ford"
+      ],
+      "correctAnswer": "Orson Welles",
+      "explanation": "Orson Welles directed and starred in 'Citizen Kane', a film often considered one of the greatest ever made.",
+      "difficulty": "medium",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 48,
+      "question": "What was the primary cause of the Peloponnesian War?",
+      "options": [
+        "Territorial disputes between Athens and Sparta",
+        "Religious conflicts",
+        "Economic competition between Persia and Greece",
+        "Succession crisis in the Roman Empire"
+      ],
+      "correctAnswer": "Territorial disputes between Athens and Sparta",
+      "explanation": "The Peloponnesian War was primarily caused by the growing tensions and territorial disputes between Athens and Sparta, leading to a prolonged conflict.",
+      "difficulty": "hard",
+      "category": "history",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 49,
+      "question": "What is the phenomenon of light bending as it passes from one medium to another?",
+      "options": ["Reflection", "Refraction", "Diffraction", "Interference"],
+      "correctAnswer": "Refraction",
+      "explanation": "Refraction is the bending of light as it passes from one medium to another, caused by the change in the speed of light.",
+      "difficulty": "medium",
+      "category": "science",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 50,
+      "question": "Which river is known as the 'Yellow River'?",
+      "options": [
+        "Mekong River",
+        "Yangtze River",
+        "Ganges River",
+        "Huang He River"
+      ],
+      "correctAnswer": "Huang He River",
+      "explanation": "The Huang He River, also known as the Yellow River, is a major river in China and one of the longest in Asia.",
+      "difficulty": "easy",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 51,
+      "question": "Who is the protagonist of the novel 'To Kill a Mockingbird'?",
+      "options": ["Atticus Finch", "Scout Finch", "Boo Radley", "Jem Finch"],
+      "correctAnswer": "Scout Finch",
+      "explanation": "Scout Finch is the young narrator and protagonist of Harper Lee's 'To Kill a Mockingbird'.",
+      "difficulty": "medium",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 52,
+      "question": "What was the name of the treaty that ended World War I?",
+      "options": [
+        "Treaty of Versailles",
+        "Treaty of Paris",
+        "Treaty of Brest-Litovsk",
+        "Treaty of Tordesillas"
+      ],
+      "correctAnswer": "Treaty of Versailles",
+      "explanation": "The Treaty of Versailles formally ended World War I between the Allied Powers and Germany.",
+      "difficulty": "medium",
+      "category": "history",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 53,
+      "question": "What is the name of the force that opposes motion between surfaces in contact?",
+      "options": ["Gravity", "Friction", "Inertia", "Momentum"],
+      "correctAnswer": "Friction",
+      "explanation": "Friction is the force that opposes motion between surfaces that are touching.",
+      "difficulty": "easy",
+      "category": "science",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 54,
+      "question": "Which country is known as the 'Spice Island'?",
+      "options": ["India", "Indonesia", "Sri Lanka", "Madagascar"],
+      "correctAnswer": "Indonesia",
+      "explanation": "Indonesia, particularly the Maluku Islands, was historically known as the 'Spice Islands' due to its production of valuable spices.",
+      "difficulty": "medium",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 55,
+      "question": "Who directed the film 'Pulp Fiction'?",
+      "options": [
+        "Quentin Tarantino",
+        "Martin Scorsese",
+        "Christopher Nolan",
+        "Steven Spielberg"
+      ],
+      "correctAnswer": "Quentin Tarantino",
+      "explanation": "Quentin Tarantino directed 'Pulp Fiction', a critically acclaimed film known for its nonlinear narrative.",
+      "difficulty": "medium",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 56,
+      "question": "What was the significance of the Edict of Milan?",
+      "options": [
+        "It legalized Christianity in the Roman Empire",
+        "It established the Holy Roman Empire",
+        "It ended the Roman Republic",
+        "It divided the Roman Empire into East and West"
+      ],
+      "correctAnswer": "It legalized Christianity in the Roman Empire",
+      "explanation": "The Edict of Milan, issued by Constantine I and Licinius in 313 AD, legalized Christianity within the Roman Empire.",
+      "difficulty": "hard",
+      "category": "history",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 57,
+      "question": "What is the name of the process by which a liquid changes into a gas?",
+      "options": ["Melting", "Freezing", "Evaporation", "Condensation"],
+      "correctAnswer": "Evaporation",
+      "explanation": "Evaporation is the process by which a liquid changes into a gas, typically due to an increase in temperature.",
+      "difficulty": "easy",
+      "category": "science",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 58,
+      "question": "Which mountain range is known as the 'Roof of the World'?",
+      "options": ["Himalayas", "Andes", "Alps", "Atlas Mountains"],
+      "correctAnswer": "Himalayas",
+      "explanation": "The Himalayas, containing the world's highest peaks, are often referred to as the 'Roof of the World'.",
+      "difficulty": "medium",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 59,
+      "question": "Who wrote the play 'A Streetcar Named Desire'?",
+      "options": [
+        "Tennessee Williams",
+        "Arthur Miller",
+        "Eugene O'Neill",
+        "Edward Albee"
+      ],
+      "correctAnswer": "Tennessee Williams",
+      "explanation": "Tennessee Williams wrote 'A Streetcar Named Desire', a Pulitzer Prize-winning play.",
+      "difficulty": "medium",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 60,
+      "question": "What was the significance of the Magna Carta?",
+      "options": [
+        "It limited the power of the English monarchy",
+        "It established the English Parliament",
+        "It ended the Hundred Years' War",
+        "It united England and Scotland"
+      ],
+      "correctAnswer": "It limited the power of the English monarchy",
+      "explanation": "The Magna Carta, signed in 1215, was a charter of rights that limited the power of the English monarchy and established principles of law.",
+      "difficulty": "hard",
+      "category": "history",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 301,
+      "question": "Describe the implications of the Alcubierre drive on causality and the potential paradoxes it introduces, considering both classical and quantum perspectives.",
+      "options": [
+        "It confirms linear time travel.",
+        "It challenges established theories of causality.",
+        "It has no impact on current physics theories.",
+        "It simplifies quantum entanglement."
+      ],
+      "correctAnswer": "It challenges established theories of causality.",
+      "explanation": "The Alcubierre drive raises complex questions about causality, potentially allowing for paradoxes, and requires reconciling general relativity with quantum mechanics.",
+      "difficulty": "genius",
+      "category": "science",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 302,
+      "question": "Discuss the geopolitical implications of the Arctic's rapidly changing climate, focusing on the potential for resource competition and the redefinition of maritime boundaries.",
+      "options": [
+        "It will lead to global harmony.",
+        "It will have no impact on international relations.",
+        "It will intensify resource competition and redefine maritime boundaries.",
+        "It will cause a global decrease in sea levels."
+      ],
+      "correctAnswer": "It will intensify resource competition and redefine maritime boundaries.",
+      "explanation": "Melting Arctic ice will open up new shipping routes and resource access, leading to potential conflicts and necessitating new international agreements.",
+      "difficulty": "genius",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 303,
+      "question": "Analyze the narrative structure of Christopher Nolan's 'Memento' in the context of post-modern film theory, and discuss its implications for audience engagement and interpretation.",
+      "options": [
+        "It follows a traditional linear narrative.",
+        "It undermines traditional narrative expectations and engages the audience in active interpretation.",
+        "It has no impact on audience engagement.",
+        "It simplifies film theory."
+      ],
+      "correctAnswer": "It undermines traditional narrative expectations and engages the audience in active interpretation.",
+      "explanation": "'Memento's' reverse chronology and unreliable narrator challenge traditional narrative structures, forcing the audience to piece together the story and question their own interpretations.",
+      "difficulty": "genius",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 304,
+      "question": "Discuss the role of contingent factors in the collapse of the Bronze Age civilizations, and evaluate the relative importance of environmental, economic, and political factors.",
+      "options": [
+        "It was solely due to natural disasters.",
+        "It was a simple matter of invasion.",
+        "It was a complex interplay of environmental, economic, and political factors.",
+        "It was caused by a single, easily identifiable event."
+      ],
+      "correctAnswer": "It was a complex interplay of environmental, economic, and political factors.",
+      "explanation": "The Bronze Age collapse involved a combination of droughts, trade disruptions, and social unrest, making it a complex historical event with multiple contributing factors.",
+      "difficulty": "genius",
+      "category": "history",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 305,
+      "question": "Explain the role of epigenetic mechanisms in the transgenerational inheritance of acquired traits, and discuss the evidence that supports or refutes Lamarckian principles.",
+      "options": [
+        "Epigenetics fully supports Lamarckian inheritance.",
+        "Epigenetics completely refutes Lamarckian inheritance.",
+        "Epigenetics provides a nuanced view of transgenerational inheritance, with some evidence supporting aspects of Lamarckian principles.",
+        "Epigenetics has no impact on inheritance."
+      ],
+      "correctAnswer": "Epigenetics provides a nuanced view of transgenerational inheritance, with some evidence supporting aspects of Lamarckian principles.",
+      "explanation": "Epigenetics demonstrates that environmental factors can alter gene expression and be passed down, offering a more complex understanding of inheritance than traditional genetics.",
+      "difficulty": "genius",
+      "category": "science",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 306,
+      "question": "Evaluate the effectiveness of various geoengineering proposals in mitigating climate change, considering their potential environmental impacts and ethical implications.",
+      "options": [
+        "Geoengineering will solve all climate change problems.",
+        "Geoengineering is universally harmful and unethical.",
+        "Geoengineering presents potential benefits and risks, requiring careful consideration of environmental and ethical factors.",
+        "Geoengineering has no measurable impact."
+      ],
+      "correctAnswer": "Geoengineering presents potential benefits and risks, requiring careful consideration of environmental and ethical factors.",
+      "explanation": "Geoengineering offers potential solutions but also raises concerns about unintended consequences and ethical dilemmas, demanding careful evaluation.",
+      "difficulty": "genius",
+      "category": "geography",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 307,
+      "question": "Discuss the evolution of musical harmony from the Renaissance to the 20th century, focusing on the breakdown of traditional tonality and the emergence of atonal and serial music.",
+      "options": [
+        "Musical harmony remained unchanged.",
+        "Musical harmony simplified over time.",
+        "Musical harmony evolved from traditional tonality to atonal and serial forms, reflecting changing artistic and cultural values.",
+        "Musical harmony regressed over time."
+      ],
+      "correctAnswer": "Musical harmony evolved from traditional tonality to atonal and serial forms, reflecting changing artistic and cultural values.",
+      "explanation": "The evolution of musical harmony reflects changing aesthetic and philosophical ideas, leading to the development of new compositional techniques.",
+      "difficulty": "genius",
+      "category": "entertainment",
+      "buttonText": "Submit answer"
+    },
+    {
+      "id": 308,
+      "question": "Analyze the intellectual and social currents that led to the development of Marxist theory, and discuss its enduring influence on 20th and 21st-century political movements.",
+      "options": [
+        "Marxist theory had no influence.",
+        "Marxist theory was solely based on economic factors.",
+        "Marxist theory emerged from a complex interplay of philosophical, economic, and social ideas, profoundly influencing political movements.",
+        "Marxist theory was a purely religious movement."
+      ],
+      "correctAnswer": "Marxist theory emerged from a complex interplay of philosophical, economic, and social ideas, profoundly influencing political movements.",
+      "explanation": "Marxist theory drew from Hegelian philosophy, classical economics, and socialist thought, providing a framework for analyzing class struggle and social change.",
+      "difficulty": "genius",
+      "category": "history",
+      "buttonText": "Submit answer"
+    }
+  ],
+
+  "result": [
+    {
+      "question": "QUIZ COMPLETED",
+      "title1": "",
+      "title2": "You scored...",
+      "subtitle": "",
+      "options": [],
+      "category": "",
+      "buttonText": "Play again"
+    }
+  ],
+  "explanation": [
+    {
+      "question": "YOU GOT IT...",
+      "title1": "",
+      "title2": "",
+      "subtitle": "Pick a subject to get started",
+      "options": [],
+      "category": "",
+      "buttonText": "Next question"
+    }
+  ]
+}

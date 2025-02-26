@@ -7,7 +7,7 @@ import ProductTop from "@/app/components/pages/menu/coffee_id/ProductTop";
 import SizeOptions from "@/app/components/pages/menu/coffee_id/SizeOptions";
 import { useCartStore } from "@/app/store/cartStore";
 import { useCoffeeStore } from "@/app/store/coffeeStore";
-import { Coffee } from "@/app/types/menus/types";
+import { CartCoffee, Coffee, Toppings } from "@/app/types/menus/types";
 import { Box, Button, CircularProgress } from "@mui/material";
 import { usePathname } from "next/navigation";
 // import { useRouter } from "next/router";
@@ -26,6 +26,54 @@ const ProductDetail = () => {
     image: "placeholder.png",
     category: "",
   });
+
+  const [coffeeForCart, setCofeeForCart] = useState<CartCoffee>({
+    addedId: 0,
+    id: "",
+    created_at: "",
+    name: "",
+    description: "",
+    price: 0,
+    image: "placeholder.png",
+    category: "",
+    toppings: {
+      milk: 0,
+      sugar: 0,
+      cream: 0,
+    },
+    count: 0,
+  });
+
+  useEffect(() => {
+    setCofeeForCart({
+      ...coffeeDetail,
+      addedId: 0,
+      toppings: {
+        milk: 0,
+        sugar: 0,
+        cream: 0,
+      },
+      count: 0,
+    });
+  }, [coffeeDetail]);
+
+  const [toppings, setToppings] = useState<Toppings>({
+    milk: 0,
+    sugar: 0,
+    cream: 0,
+  });
+
+  useEffect(() => {
+    setCofeeForCart({
+      ...coffeeForCart,
+      toppings: {
+        milk: toppings.milk,
+        sugar: toppings.sugar,
+        cream: toppings.cream,
+      },
+    });
+  }, [toppings]);
+
   const { coffees, fetchCoffees } = useCoffeeStore();
 
   const { addToCart } = useCartStore();
@@ -93,7 +141,7 @@ const ProductDetail = () => {
           <FullTwoDividedCard
             color={"#ffffff"}
             left={<SizeOptions />}
-            right={<Addition />}
+            right={<Addition toppings={toppings} setToppings={setToppings} />}
           />
           <CoffeeDescription description={coffeeDetail?.description} />
         </Box>
@@ -112,7 +160,7 @@ const ProductDetail = () => {
           boxShadow: "0 0 6px #000000",
           zIndex: 300,
         }}
-        onClick={() => addToCart(coffeeDetail)}
+        onClick={() => addToCart(coffeeForCart)}
       >
         Add to Order
       </Button>

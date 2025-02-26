@@ -1,11 +1,11 @@
-import { Coffee } from "@/app/types/menus/types";
+import { CartCoffee } from "@/app/types/menus/types";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import { CoffeeItemCard } from "../CoffeeItemCard";
 // import HRDivider from "@/app/components/michelaneous/HRDivider";
 import ActionBar from "./ActionBar";
 
-const CartItem = ({ coffeeDetail }: { coffeeDetail: Coffee }) => {
+const CartItem = ({ coffeeDetail }: { coffeeDetail: CartCoffee }) => {
   return (
     <Box
       sx={{
@@ -40,6 +40,9 @@ const CartItem = ({ coffeeDetail }: { coffeeDetail: Coffee }) => {
         >
           ${coffeeDetail.price} X {coffeeDetail.count}
         </Typography>
+        <Box>
+          <Typography>{coffeeDetail.toppings.milk}</Typography>
+        </Box>
       </Box>
       <ActionBar id={coffeeDetail.id} />
       {/* <HRDivider /> */}

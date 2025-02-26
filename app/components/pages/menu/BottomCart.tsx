@@ -23,8 +23,9 @@ const BottomCart = () => {
       }}
     >
       <Link href="/menu/cart" style={{ position: "relative" }}>
-        <ShoppingCartIcon sx={{ color: "#02a95b", fontSize: "55px" }} />
+        {/* <ShoppingCartIcon sx={{ color: "#02a95b", fontSize: "55px" }} /> */}
 
+        <ShoppingCartIcon sx={{ color: "#02a95b", fontSize: "55px" }} />
         <Typography
           sx={{
             color: "white",

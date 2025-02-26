@@ -20,7 +20,7 @@ function MenuNav() {
 
   const menu_options = [
     { id: 1, title: "Menu", link: "/menu" },
-    { id: 2, title: "Featured", link: "/menu/featured" },
+    // { id: 2, title: "Featured", link: "/menu/featured" },
     { id: 3, title: "Previous", link: "/menu/previous" },
     { id: 4, title: "Favorites", link: "/menu/favorites" },
   ];

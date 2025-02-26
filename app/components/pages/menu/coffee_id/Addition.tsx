@@ -1,5 +1,5 @@
 import HRDivider from "@/app/components/michelaneous/HRDivider";
-import { Toppings } from "@/app/types/menus/types";
+// import { Toppings } from "@/app/types/menus/types";
 import {
   Box,
   FormControl,
@@ -9,15 +9,9 @@ import {
   SelectChangeEvent,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 
-function Addition() {
-  const [toppings, setToppings] = useState<Toppings>({
-    milk: 0,
-    sugar: 0,
-    cream: 0,
-  });
-
+function Addition({ toppings, setToppings }) {
   function handleChange(e: SelectChangeEvent) {
     console.log(e.target.name);
     console.log(e.target.value);
